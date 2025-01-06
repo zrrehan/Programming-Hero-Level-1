@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "stylesheet" href = "styles/nav.css"> 
+    <style>
+        .dropdown {
+            display: none;
+            background-color: antiquewhite;
+        }
+        nav li:hover .dropdown {
+            display: block;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="4.navbar.html">Home</a></li>
+                <li><a href="0.Aud-vid.html">Video</a></li>
+                <li><a href="1.blog.html">Blog</a></li>
+                <li><a href="2.form.html">Form</a></li>
+                <li><a href="3.table.html">Table</a></li>
+                <li><a href = "3.table.html">Unknown</a>
+                    <ul class = "dropdown">
+                        <li><a href="4.navbar.html">Home</a></li>
+                        <li><a href="0.Aud-vid.html">Video</a></li>
+                        <li><a href="1.blog.html">Blog</a></li>
+                        <li><a href="2.form.html">Form</a></li>
+                        <li><a href="3.table.html">Table</a></li>
+                    </ul>
+
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Welcome to CSE113: Intro To Development</h1>
+    </main>
+</body>
+</html>

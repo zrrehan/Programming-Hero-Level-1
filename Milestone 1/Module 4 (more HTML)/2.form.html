@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label {
+            display: block;
+        }
+    </style>
+    <link rel = "stylesheet" href = "styles/nav.css"> 
+</head>
+<body>
+    <header> <!--Added after the 4.navbar.html-->
+        <nav>
+            <ul>
+                <li><a href="4.navbar.html">Home</a></li>
+                <li><a href="0.Aud-vid.html">Video</a></li>
+                <li><a href="1.blog.html">Blog</a></li>
+                <li><a href="2.form.html">Form</a></li>
+                <li><a href="3.table.html">Table</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Please fill up the form</h2>
+            <form>
+                <label for = "name">
+                    Your Name:
+                    <input type = "name" placeholder="Your name">
+                </label>
+
+                <label for = "email">
+                    Insert Your Email
+                    <input type = "email" placeholder="Email">
+                </label>
+
+                <fieldset>
+                    <legend>Choose your Gender</legend>
+                    <label for = "male">
+                        <input type = "radio" id = "male" name = gender>Male
+                    </label>
+                    <label for = female>
+                        <input type = "radio" id = "female" name = "gender"> Female
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Choose You favourite Food</legend>
+                    <label for = "Pizza">
+                        <input type = "checkbox" id = "Pizza" name = "food"> Pizza
+                    </label>
+                    <label for = "Burger">
+                        <input type = "checkbox" id = "Burger" name = "food"> Burger
+                    </label>
+                </fieldset>
+
+                <textarea cols = "30" rows = "4"></textarea>
+                <input type = "reset"> 
+                <input type = "submit"> 
+            </form>
+            
+            
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,21 @@
+nav > ul {
+    display: flex;
+}
+
+nav li {
+    list-style: none;
+   
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    padding: 20px;
+}
+
+nav a:hover {
+    background-color: black;
+    color: whitesmoke;
+    box-shadow: 5px 5px 2px rgb(140, 140, 140);
+}
