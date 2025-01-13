@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1::after {
+            content: ".pdf";
+            color: red;
+            font-size: 25px;
+        }
+
+        h1::before {
+            content: "Start: ";
+            color: rgb(1, 152, 152);
+        }
+        p::first-letter {
+            font-size: 60px;
+        }
+
+        p::first-line {
+            background-color: cyan;
+        }
+
+        ::selection {
+            background-color: brown; 
+            color: white;           
+        }
+
+        input::placeholder {
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>heading - 1</h1>
+    <h1>heading - 2</h1>
+    <h1>heading - 3</h1>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae itaque ab tempore amet debitis! Numquam delectus fugiat sunt perspiciatis facilis velit nihil sapiente maiores, sit veniam. Atque ipsam enim similique?</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates illo vero magni adipisci ea itaque praesentium quia deserunt, tempora officiis rem? Quod autem ratione inventore rerum consequatur cumque neque nulla.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam nemo aut consectetur accusantium necessitatibus voluptatibus ut perspiciatis facilis ratione similique adipisci voluptatum incidunt, ducimus ullam laboriosam quos non blanditiis minus.</p>
+
+    <input placeholder="this is placeholder">
+</body>
+</html>
