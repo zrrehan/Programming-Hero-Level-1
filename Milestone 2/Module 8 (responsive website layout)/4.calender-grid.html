@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(169, 169, 169);
+        }
+        .calender-container{
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            column-gap: 10px;
+            row-gap: 10px;
+        }
+
+        .grid-day, .grid-box {
+            background-color: rgb(255, 255, 255);
+            font-size: 3rem;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .grid-day {
+            font-size: 2rem;
+            background-color: brown;
+            color: white;
+        }
+
+        .grid-box:hover {
+            cursor: pointer;
+            background-color: rgba(165, 42, 42, 0.549);
+            color: white;
+        }
+        .another-month {
+            font-size: 1.5rem;
+            background-color: rgba(255, 255, 255, 0.608);
+        }
+    </style>
+</head>
+<body>
+    <h1>Calender</h1>
+    <div class="calender-container">
+        <div class="grid-day">S</div>
+        <div class="grid-day">M</div>
+        <div class="grid-day">T</div>
+        <div class="grid-day">W</div>
+        <div class="grid-day">Th</div>
+        <div class="grid-day">F</div>
+        <div class="grid-day">S</div>
+        <div class="grid-box another-month">28</div>
+        <div class="grid-box another-month">29</div>
+        <div class="grid-box another-month">30</div>
+        <div class="grid-box">1</div>
+        <div class="grid-box">2</div>
+        <div class="grid-box">3</div>
+        <div class="grid-box">4</div>
+        <div class="grid-box">5</div>
+        <div class="grid-box">6</div>
+        <div class="grid-box">7</div>
+        <div class="grid-box">8</div>
+        <div class="grid-box">9</div>
+        <div class="grid-box">10</div>
+        <div class="grid-box">11</div>
+        <div class="grid-box">12</div>
+        <div class="grid-box">13</div>
+        <div class="grid-box">14</div>
+        <div class="grid-box">15</div>
+        <div class="grid-box">16</div>
+        <div class="grid-box">17</div>
+        <div class="grid-box">18</div>
+        <div class="grid-box">19</div>
+        <div class="grid-box">20</div>
+        <div class="grid-box">21</div>
+        <div class="grid-box">22</div>
+        <div class="grid-box">23</div>
+        <div class="grid-box">24</div>
+        <div class="grid-box">25</div>
+        <div class="grid-box">26</div>
+        <div class="grid-box">27</div>
+        <div class="grid-box">28</div>
+        <div class="grid-box">29</div>
+        <div class="grid-box">30</div>
+        <div class="grid-box">31</div>
+        <div class="grid-box another-month">1</div>
+        
+    </div>
+</body>
+</html>
