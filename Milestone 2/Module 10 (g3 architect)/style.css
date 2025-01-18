@@ -122,7 +122,7 @@ main > section {
 
 
 /* designing the facts  */
-.fact-title, .title-numbers, .sponsors-title {
+.fact-title, .title-numbers, .sponsors-title, .feature-showcase-title {
     font-size: 2.8rem;
     font-weight: 700;
 }
@@ -144,6 +144,43 @@ main > section {
 
 .title-numbers {
     margin: 0px;
+}
+
+/* styling feature showcase  */
+.feature-showcase-title {
+    border-left: 5px solid rgba(255, 144, 14, 1); 
+    padding-left: 20px;
+}
+
+.feature-showcase-card-container {
+    height: 740px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.feature-showcase-card > h1 {
+    font-weight: 600;
+    font-size: 1.25rem;
+
+}
+
+.xp-btn {
+    height: 200px;
+    width: 350px;
+    margin-top: -130px;
+    margin-left: -100px;
+    padding: 0px;
+}
+
+.big-text {
+    font-size: 4rem;
+    margin: 0px;
+}
+
+.features-showcase {
+    gap: 100px
 }
 
 /* styling sponsor  */
@@ -184,12 +221,57 @@ main > section {
         justify-items: center;
         gap: 40px;
     }
+    .features-showcase {
+        flex-direction: column;
+    }
+
+    .feature-showcase-img-container {
+        display: flex;
+        justify-content: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:20px;
+    }
+
+    .xp-btn {
+        margin: 0px;
+        height: 150px;
+        width: 200px;
+    }
+    .big-text {
+        font-size: 2rem;
+    }
 }   
 
 @media screen and (max-width: 960px) and (min-width: 726px) {
     .teams {
         flex-direction: column;
     }
+    .feature-showcase-img-container >img {
+        width: 100%;
+    }
+    
+    .features-showcase {
+        flex-direction: column;
+    }
+
+    .feature-showcase-img-container {
+        display: flex;
+        justify-content: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:20px;
+    }
+
+    .xp-btn {
+        margin: 0px;
+        height: 150px;
+        width: 200px;
+    }
+    .big-text {
+        font-size: 2rem;
+    }
+
 
     .facts-card-container {
         display: grid;
