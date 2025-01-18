@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            background-color:crimson;
+            color: white;
+            padding: 5px;
+            border-radius: 20px;
+        }
+
+        .header {
+            grid-area: header;
+        }
+
+        .nav {
+            grid-area: nav;
+        }
+
+        .main {
+            grid-area: main;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+        }
+
+        .footer {
+            grid-area: footer;
+        }
+
+        .container {
+            display: grid;
+            gap: 20px;
+            grid-template-areas: 
+            "header header header header "
+            "nav    main   main   sidebar"
+            "nav    main   main   sidebar"
+            "footer footer footer footer";
+        }
+
+        @media screen and (max-width: 576px) {
+            .container {
+                grid-template-areas:
+                "header"
+                "nav"
+                "main"
+                "sidebar"
+                "footer";
+            }
+        }
+
+        @media screen and (min-width: 577px) and (max-width: 1076px) {
+            .container {
+                grid-template-areas: 
+                "header header header"
+                "nav    main   main"
+                "sidebar sidebar sidebar"
+                "footer footer footer";
+            }
+        }
+    </style>
+</head>
+<body class = "container">
+    <div class="header"><h1>Header</h1></div>
+    <div class="nav">Navbar</div>
+    <div class="main">
+        <div>
+            <h1>Content</h1>
+            <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus iusto eligendi et consequatur, accusantium accusamus mollitia iste autem cumque doloremque at, veritatis quisquam minima distinctio itaque incidunt laboriosam! Unde, nulla.</span><span>Reiciendis ipsum consectetur, voluptas deleniti placeat non asperiores dicta? Dignissimos tenetur excepturi quaerat fugiat, neque vero hic explicabo nihil illo corrupti? Dicta, vero qui quod nihil consequuntur sint maiores numquam?</span><span>Suscipit expedita deserunt, repudiandae sequi ea modi et non, illo magni possimus tempora sunt itaque, libero quas sed facilis? Maxime cupiditate, aut nihil voluptatem quisquam eius nesciunt soluta similique labore.</span><span>Rem sequi atque consectetur, itaque nam nisi reiciendis hic ab in molestias aliquid quis laboriosam veritatis voluptas, natus veniam fugiat earum debitis molestiae officiis expedita, libero eveniet ad sed? Beatae!</span></p>
+        </div>
+        <div>
+            <h1>Content</h1>
+            <p><span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam, provident! Sit distinctio ipsum, eos unde minus iste vero perspiciatis nihil quo saepe impedit, ratione libero vitae a omnis quod ut.</span><span>Aut, deleniti eaque aliquam blanditiis labore sapiente voluptate mollitia dolores dolor, consectetur perspiciatis quasi eligendi est autem totam temporibus distinctio maiores! Ad voluptatum a aliquid corporis saepe corrupti ratione vitae.</span><span>Nostrum voluptatem, nesciunt error at consequatur dolore ea repellendus id libero! Dicta inventore ad error rerum consectetur rem voluptas veniam hic! Eligendi maiores nihil accusantium sit odit ab aperiam dolores?</span><span>Nesciunt quidem veritatis animi sapiente temporibus aperiam adipisci cum neque quisquam. Recusandae eos minus rem amet quaerat voluptatum! Facere nostrum accusantium nam quod aperiam, ratione optio. Incidunt cum esse possimus.</span></p>
+        </div>
+    </div>
+    <div class="sidebar"><h2>side Content</h2></div>
+    <div class="footer"><h3>Footer</h3></div>
+</body>
+</html>
