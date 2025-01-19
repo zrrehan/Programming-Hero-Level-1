@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            height: 200px;
+            width: 200px;
+            background-color: aquamarine;
+            border: 2px solid black;
+            /* property name || duration || easing function || delay  */
+            transition: width 2s linear 2s, background-color 4s linear 1s, transform 1s ease-in 0s;
+        }
+
+        div:hover {
+            width: 500px;
+            background-color: rgb(103, 142, 25);
+            transform: rotate(40deg) scale(0.4) translateX(150px)
+        }
+    </style>
+</head>
+<body>
+    <div>
+        box - 1
+    </div>
+    <div>
+        box - 2
+    </div>
+</body>
+</html>
