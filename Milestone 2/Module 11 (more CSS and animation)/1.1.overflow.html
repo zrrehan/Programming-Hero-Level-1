@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            border: 2px solid black;
+            width: 500px;
+            height: 500px;
+            overflow: hidden; /*hides the text which overflowed */
+            overflow: scroll; /* got a scroll bar to see the overflown course */
+            overflow-x: hidden; /* we dont need scroll in horizontally here */
+        }
+
+        /* note: when we did this styles then in the 2nd div we didnt need the scrollbar but still we can 
+              see a scroll bar.. and we dont always know will there be overflow or not. so to tackle this.. ..  */
+        
+        div {
+            overflow: auto;
+            /* auto means: if we need scroll then it will show scroll. else pass  */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis nostrum sint beatae cum distinctio mollitia expedita veritatis error esse sunt velit maiores facilis natus, dolor id dolorum ratione eligendi nulla optio sit quaerat! Magnam tempora atque eligendi iste omnis inventore officiis consequuntur iusto voluptas nostrum. Obcaecati, libero, officiis optio labore est perspiciatis minus, vitae inventore eum corrupti fugit et molestiae blanditiis iure atque enim! Maiores nostrum eligendi minus et. Veritatis tempore unde quia tenetur et, totam asperiores suscipit velit natus, doloribus iure, vitae voluptates ut repudiandae omnis atque incidunt nisi at nam vel adipisci mollitia rem! In voluptatem harum excepturi expedita eos! Reprehenderit, molestias aperiam! Et ipsum corporis cumque dicta tempora quae dolor laudantium dolores ducimus quis eos magnam rem quia ipsa ea, omnis fugit quam magni perspiciatis? Animi debitis pariatur enim, provident, assumenda est nulla deleniti quae nam necessitatibus alias temporibus libero dignissimos sapiente a quis repellendus, minus nemo? Adipisci inventore nisi dolorem reprehenderit ipsa quaerat magnam culpa, omnis sapiente necessitatibus rem nam dignissimos voluptatibus vel distinctio praesentium corporis numquam nihil provident nemo expedita. Quisquam nisi cum id omnis iusto ex accusamus, explicabo ratione ea architecto ab fugit provident dolorum dolores error consequatur aliquid ducimus nulla numquam porro facilis voluptas adipisci. Repudiandae quo aut fugit quaerat necessitatibus praesentium non, enim, tenetur nobis alias reprehenderit excepturi? Porro sed repudiandae aliquid inventore sapiente sit error nihil illum earum libero tempora reprehenderit repellat, beatae, magni consequatur hic veniam ipsa nostrum nulla blanditiis quo. Vero id ea quia reiciendis quae officia fuga adipisci repudiandae laborum praesentium magni nesciunt tempore error corrupti, assumenda illo doloribus molestiae nemo. Dignissimos iure tempore saepe distinctio corporis reprehenderit aliquam, esse dolorem porro deserunt quam quo labore, iste laborum voluptatibus provident? Pariatur cupiditate deleniti consectetur nobis et eos eum, incidunt soluta hic labore perspiciatis voluptatem cum tenetur, ullam excepturi facere quae veniam nulla rem cumque, officiis quia. Quibusdam at nobis aliquam! Ratione adipisci sequi quam est ab magni soluta ipsum, provident minima deserunt exercitationem tempore incidunt, doloribus error doloremque fuga inventore voluptatibus veritatis praesentium facere vitae quia. Dolorum enim beatae, quae ad ex hic harum natus porro sapiente blanditiis tenetur quod corrupti perferendis dolorem ratione ullam vel quaerat. Voluptatibus quaerat cum totam sint, laborum quo. Adipisci deleniti natus quae voluptas obcaecati quam voluptate reprehenderit. Fuga a ab rem laudantium saepe assumenda consectetur culpa aspernatur optio beatae suscipit quae sint laborum nisi, distinctio vitae aliquid voluptas? Delectus, voluptatibus blanditiis? Exercitationem!</p>
+    </div>
+
+    <div>
+        <p>Hello world</p>    
+    </div>
+</body>
+</html>
