@@ -1,0 +1,2 @@
+Go to this repo and clone it 
+https://github.com/ProgrammingHero1/g3-architect-website

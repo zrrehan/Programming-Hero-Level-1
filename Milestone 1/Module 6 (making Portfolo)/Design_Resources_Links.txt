@@ -1,0 +1,2 @@
+To get the resources clone that repo 
+https://github.com/ProgrammingHero1/portfolio-resources
