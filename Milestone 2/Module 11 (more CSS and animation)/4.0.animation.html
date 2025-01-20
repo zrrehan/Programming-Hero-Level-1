@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            height: 300px;
+            width: 300px;
+            background-color: rgb(5, 170, 60);
+
+            animation-name: div_animation;
+            animation-duration: 3s;
+            animation-timing-function: ease-in;
+            animation-delay: 0s;
+            animation-iteration-count: 6;
+            animation-direction: alternate;
+        }
+
+        @keyframes div_animation {
+            from {
+                height: 300px;
+            } to {
+                height: 1000px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
