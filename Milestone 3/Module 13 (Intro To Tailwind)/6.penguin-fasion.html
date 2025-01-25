@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <style>
+        .bebas-neue {
+            font-family: "Bebas Neue", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+    </style>
+</head>
+<body>
+    <header class="bg-[rgba(255,251,240,1)]">
+        <nav class = "flex px-4 py-6 justify-between">
+            <img src="assets/icons/logo.png" class = "w-[192px] h-[26px] lg:w-[290px] lg:h-[40px]">
+            <div class="primary-navigation h-[24px] w-[380px] hidden lg:flex lg:justify-between lg:text-base ">
+                <a href="#">Home</a><a href="#">Product</a><a href="#">About Us</a><a href="#">Contact us</a>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 lg:hidden">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+              </svg>
+        </nav>
+        <div class = "flex flex-col items-center gap-12 lg:flex-row lg:justify-center lg:gap-48 ">
+            <div class = "h-64 w-80 lg:w-[28vw] lg:h-[21vw]">
+                <h1 class = "text-6xl bebas-neue"><span class = "text-[rgba(250,190,76,1)]">BE THE PENGUINS</span><br>OF WINTER</h1>
+                <p class = "text-base my-[10px]">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <button class = "bg-green-500 h-[60px] w-[170px] rounded-lg bg-gradient-to-t from-[#85A019] to-[#A4BC46] flex justify-center items-center gap-2">
+                    <img class = "h-6 w-6" src="assets/icons/shopping-cart 1.png">
+                    <p class = "text-green-50">BUY NOW</p>
+                </button>
+            </div>
+            <img class = "w-[309px] h-[300px] lg:w-[470px] lg:h-[487px]" src="assets/images/model.png" alt="">
+        </div>
+    </header>
+</body>
+</html>
