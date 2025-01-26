@@ -6,17 +6,6 @@
     <title>Document</title>
     <!-- tailwind CDN  -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                clifford: '#da373d',
-              }
-            }
-          }
-        }
-      </script>
 
     <!-- Font awesome CDN  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -25,21 +14,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-
 </head>
+
 <body style = "font-family: Manrope">
     <main class = "max-w-screen-lg mx-auto">
-        <header class = "flex pt-10 mb-20">
+        <header class = "flex flex-col-reverse items-center lg:flex-row pt-10 mb-20 mx-auto">
             <!-- header text container  -->
-            <div class = "">
+            <div class = "text-center lg:text-start">
                 <h1 class = "text-5xl font-extrabold">It's good <br>
                     tea time at The <br>
                     Tea House
                 </h1>
-                <p class = "w-5/6 text-lg font-medium text-[rgba(119,119,119,1)] my-8">
+                <p class = "w-5/6 text-lg font-medium text-[rgba(119,119,119,1)] my-8 mx-auto lg:ml-0">
                     Tea and Botanical Solutions Supplier Give Optimum Satisfaction To Your Taste Buds.
                 </p>
-                <button class = "bg-gradient-to-r from-[#FF8938] to-[#FF0000] px-8 py-4 rounded-md font-bold text-white flex justify-center items-center gap-2">Explore more <i class="fa-solid fa-arrow-right -rotate-45"></i></button>
+                <button class = "mx-auto lg:ml-0 bg-gradient-to-r from-[#FF8938] to-[#FF0000] px-8 py-4 rounded-md font-bold text-white flex justify-center items-center gap-2">Explore more <img src="images/arrow.png" alt=""></i></button>
             </div>
             <!-- image container  -->
             <div class = "">
@@ -53,6 +42,30 @@
                 </div>
             </div>
         </header>
+
+        <!-- presented section  -->
+        <div class = "grid gap-9 lg:flex lg:justify-between">
+            <div class = "grid grid-cols-2 grid-rows-4 gap-8">
+                <div class = "row-span-1 bg-gradient-to-r from-orange-50 to-orange-100 rounded-xl"></div>
+                <div class = "py-11 row-span-3 box-content bg-[rgba(230,166,35,0.1)] rounded-xl"><img class = "h-[266px] w-[177px] mx-auto" src="images/fresh-1.png"></div>
+                <div class = "py-11 row-span-3 box-content bg-[rgba(87,118,57,0.1)] rounded-xl"><img class = "h-[273px] w-[146px] mx-auto"src="images/fresh-2.png"></div>
+                <div class = "row-span-1 bg-gradient-to-r from-[#D9D9D9] to-[#FFFFFF] rounded-xl"></div>
+            </div>
+            <div class = "lg:w-1/2 grid gap-5">
+                <h1 class = "text-4xl lg:text-5xl font-extrabold">Great Tea, Feshly Presented</h1>
+                <p>
+                    The meaning of gong cha is chanese is to provide the best tea to emperor from all possessions . It represents the highest quality and self expectation. Establishing in 2006, Gong cha had been deeply appreciated by its custoers  because of good words of mouth and unique customized service orginated from Taiwan.
+                </p>
+                <div>
+                    <h2 class = "font-extrabold text-xl">Unique Taste</h2>
+                    <p>A Unique and different style from other teapots gives a luxurious and minimalist impression</p>
+                </div>
+                <div>
+                    <h2 class = "font-extrabold text-xl">Premium quality</h2>
+                    <p>Premium Quality that makes tea more elegant and more durable when you use it.</p>
+                </div>
+            </div>
+        </div>
     </main>
 </body>
 </html>
