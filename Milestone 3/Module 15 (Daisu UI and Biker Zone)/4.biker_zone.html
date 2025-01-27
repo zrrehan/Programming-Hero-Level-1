@@ -12,13 +12,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
+    <!-- tailwind Customizing  -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+                bike_orange: "#E76F51",
+                bike_orange_hover: '#C65D43'
+              }
+            }
+          }
+        }
+    </script>
 </head>
 <body style = "font-family: poppins;">
     <!-- header section  -->
-    <header>
+    <header class = "container mx-auto">
         <!-- navbar  -->
         <div class="navbar bg-base-100">
-            <div class="navbar-start">
+            <div class="flex-grow">
               <div class="dropdown">
                 <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
                   <svg
@@ -43,9 +57,9 @@
                     <li><a>Contact</a></li>
                 </ul>
               </div>
-              <a class="btn btn-ghost text-xl">Biker Zone</a>
+              <a class="font-bold text-2xl">Biker Zone</a>
             </div>
-            <div class="navbar-center hidden lg:flex">
+            <div class="navbar-center hidden lg:flex pr-8">
               <ul class="menu menu-horizontal px-1">
                 <li><a>Home</a></li>
                 <li><a>Shop</a></li>
@@ -53,8 +67,8 @@
                 <li><a>Contact</a></li>
               </ul>
             </div>
-            <div class="navbar-end">
-              <a class="btn btn-error">Login</a>
+            <div class="">
+              <a class="btn bg-bike_orange text-white hover:bg-bike_orange_hover">Login</a>
             </div>
         </div>
     </header>
