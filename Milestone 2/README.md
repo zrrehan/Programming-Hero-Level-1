@@ -6,9 +6,6 @@ In this module, we learned to create a responsive website layout. The focus was 
 ## Module-09: More Responsive Layout and Responsive Portfolio
 This module built upon the previous one, with an emphasis on refining responsive layouts. We also worked on developing a responsive portfolio, showcasing our skills and projects. The portfolio design was optimized for various screen sizes, making it user-friendly on both mobile and desktop devices.
 
-## No Module
-This section indicates there was no specific module for this milestone, but additional focus was given to implementing knowledge from prior modules.
-
 ## Module-10: HTML CSS Only Landing Page - G3 Architects
 In this module, we created a landing page for **G3 Architects** using only HTML and CSS. The design was clean and professional, focusing on showcasing the company's services and portfolio. The landing page was optimized for responsiveness, providing an engaging experience for users across different devices.
 
