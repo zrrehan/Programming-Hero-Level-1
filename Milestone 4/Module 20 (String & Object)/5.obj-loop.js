@@ -7,7 +7,6 @@ const person = {
     "enrollment-year": 2022
 }
 
-console.log(person);
-console.log(person["enrollment-year"]);
-delete person["enrollment-year"];
-console.log(person)
+for(const keys in person) {
+    console.log(`${keys} = ${person[keys]}`);
+}
