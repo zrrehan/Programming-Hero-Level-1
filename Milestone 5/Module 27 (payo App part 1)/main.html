@@ -1,1 +1,97 @@
-hello
+<!DOCTYPE html>
+<html lang="en" data-theme = "light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Daisy UI CDN  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- font awesome CDN  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class = "bg-base-300 w-[500px] mx-auto px-4 pt-4 ">
+        <header class="flex justify-between">
+            <div class = "flex gap-5">
+                <img class="h-14" src="assets/payoo.png">
+                <div>
+                    <p class = "font-bold text-2xl">$ <span id = "wallet-value">45000.00</span></p>
+                    <p>Available Balance</p>
+                </div>
+            </div>
+            <button class="btn">Log Out</button>
+        </header>
+
+        <!-- section select grid  -->
+        <section class = "space-y-5">
+            <!-- grid text  -->
+            <div>
+                <p class="font-bold text-2xl">🔥 Welcome to Payoo!</p>
+                <p>
+                    Enjoy easy and convenient financial services with us. Cashout charge is low and
+                </p>
+            </div>
+            <!-- grid  -->
+            <div class = "grid grid-cols-3 gap-3">
+                <div class = "border-2 border-black h-20 w-36 flex flex-col items-center justify-center">
+                    <i class="fa-solid fa-wallet text-3xl"></i>
+                    <p>Add Money</p>
+                </div>
+                <div class="border-2 border-black h-20 w-36 flex flex-col items-center justify-center">
+                    <i class="fa-solid fa-sack-dollar text-3xl"></i>
+                    <p>Cash Out</p>
+                </div>
+                <div class="border-2 border-black h-20 w-36 flex flex-col items-center justify-center">
+                    <i class="fa-solid fa-money-bill-transfer text-3xl"></i>
+                    <p>Transfer Money</p>
+                </div>
+                <div class="border-2 border-black h-20 w-36 flex flex-col items-center justify-center">
+                    <i class="fa-solid fa-money-bill-trend-up text-3xl"></i>
+                    <p>Get Bonus</p>
+                </div>
+                <div class="border-2 border-black h-20 w-36 flex flex-col items-center justify-center">
+                    <i class="fa-solid fa-money-bills text-3xl"></i>
+                    <p>Pay Bill</p>
+                </div>
+                <div class="border-2 border-black h-20 w-36 flex flex-col items-center justify-center">
+                    <i class="fa-solid fa-coins text-3xl"></i>
+                    <p>Transaction</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- add money section  -->
+        <section class = "mt-16 flex flex-col items-center gap-5">
+            <h1 class = "font-bold text-3xl">Add Money</h1>
+            <div class = "text-center space-y-5">
+                <div>
+                    <p>Select A bank</p>
+                    <select id = "bank" class="select border-2 border-black select-ghost w-full max-w-xs bg-base-300">
+                        <option value = "notSelected" disabled selected>Select The Bank</option>
+                        <option value = "bkash">Bkash</option>
+                        <option value = "nagad">Nagad</option>
+                        <option value = "upai">Upai</option>
+                    </select>
+                </div>
+                <div>
+                    <p>Pin Number</p>
+                    <input id = "pin" type="text" placeholder="PIN number (1234)" class="input input-bordered border-2 border-black w-full max-w-xs bg-base-300" />
+                </div>
+                <div>
+                    <p>Money Amount</p>
+                    <input id="Amount" type="text" placeholder="Enter Amount"
+                        class="input input-bordered border-2 border-black w-full max-w-xs bg-base-300" />
+                </div>
+                <button id = "addMoneyButton" class = "btn btn-primary border-[#0874F2] bg-[#0874F2] text-[white]">Add Money</button>
+            </div>
+        </section>
+    </div>
+
+    <script src = "scripts/addMoney.js"></script>
+</body>
+</html>
