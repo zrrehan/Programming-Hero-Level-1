@@ -98,20 +98,20 @@
             <div class="text-center space-y-5">
                 <div>
                     <p>Marchent Account</p>
-                    <input type="text" placeholder="eg: 01XXXXXXXXX"
+                    <input id = "marchentCashOut" type="text" placeholder="eg: 01XXXXXXXXX"
                         class="input input-bordered border-2 border-black w-full max-w-xs bg-base-300" />
                 </div>
                 <div>
                     <p>Pin Number</p>
-                    <input type="text" placeholder="PIN number (1234)"
+                    <input id = "cashOutPin" type="text" placeholder="PIN number (1234)"
                         class="input input-bordered border-2 border-black w-full max-w-xs bg-base-300" />
                 </div>
                 <div>
                     <p>Money Amount</p>
-                    <input type="text" placeholder="Enter Amount"
+                    <input id = "cashOutAmount" type="text" placeholder="Enter Amount"
                         class="input input-bordered border-2 border-black w-full max-w-xs bg-base-300" />
                 </div>
-                <button id="addMoneyButton" class="btn btn-primary border-[#0874F2] bg-[#0874F2] text-[white]">Cash Out</button>
+                <button id="cashOutButton" class="btn btn-primary border-[#0874F2] bg-[#0874F2] text-[white]">Cash Out</button>
             </div>
         </section>
     </div>
@@ -121,5 +121,8 @@
 
     <!-- add functionality in add money section  -->
     <script src = "scripts/addMoney.js"></script>
+
+    <!-- add functionality in cash out section  -->
+     <script src = "scripts/cashOut.js"></script>
 </body>
 </html>
