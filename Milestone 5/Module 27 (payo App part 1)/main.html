@@ -25,6 +25,7 @@
             </div>
             <button class="btn">Log Out</button>
         </header>
+        <br>
 
         <!-- section select grid  -->
         <section class = "space-y-5">
@@ -37,11 +38,11 @@
             </div>
             <!-- grid  -->
             <div class = "grid grid-cols-3 gap-3">
-                <div class = "border-2 border-black h-20 w-36 flex flex-col items-center justify-center">
+                <div id = "add-money" class = "border-2 border-black h-20 w-36 flex flex-col items-center justify-center">
                     <i class="fa-solid fa-wallet text-3xl"></i>
                     <p>Add Money</p>
                 </div>
-                <div class="border-2 border-black h-20 w-36 flex flex-col items-center justify-center">
+                <div id = "cash-out" class="border-2 border-black h-20 w-36 flex flex-col items-center justify-center">
                     <i class="fa-solid fa-sack-dollar text-3xl"></i>
                     <p>Cash Out</p>
                 </div>
@@ -66,7 +67,7 @@
 
 
         <!-- add money section  -->
-        <section class = "mt-16 flex flex-col items-center gap-5">
+        <section id = "add-money-section" class = "mt-16 flex flex-col items-center gap-5">
             <h1 class = "font-bold text-3xl">Add Money</h1>
             <div class = "text-center space-y-5">
                 <div>
@@ -90,8 +91,35 @@
                 <button id = "addMoneyButton" class = "btn btn-primary border-[#0874F2] bg-[#0874F2] text-[white]">Add Money</button>
             </div>
         </section>
+
+        <!-- Cash Out section -->
+        <section id = "cash-out-section" class = "mt-16 flex flex-col items-center gap-5">
+            <h1 class="font-bold text-3xl">Cash Out</h1>
+            <div class="text-center space-y-5">
+                <div>
+                    <p>Marchent Account</p>
+                    <input type="text" placeholder="eg: 01XXXXXXXXX"
+                        class="input input-bordered border-2 border-black w-full max-w-xs bg-base-300" />
+                </div>
+                <div>
+                    <p>Pin Number</p>
+                    <input type="text" placeholder="PIN number (1234)"
+                        class="input input-bordered border-2 border-black w-full max-w-xs bg-base-300" />
+                </div>
+                <div>
+                    <p>Money Amount</p>
+                    <input type="text" placeholder="Enter Amount"
+                        class="input input-bordered border-2 border-black w-full max-w-xs bg-base-300" />
+                </div>
+                <button id="addMoneyButton" class="btn btn-primary border-[#0874F2] bg-[#0874F2] text-[white]">Cash Out</button>
+            </div>
+        </section>
     </div>
 
+    <!-- Toggle between services (add money, cash out and others)  -->
+    <script src="scripts/toggle.js"></script>
+
+    <!-- add functionality in add money section  -->
     <script src = "scripts/addMoney.js"></script>
 </body>
 </html>
