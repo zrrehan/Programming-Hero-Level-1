@@ -1,11 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme = "light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <!-- Daisy UI CDN  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
+    <section class = "h-[100vh]">
+        <!-- logo design  -->
+        <div class = "flex flex-col justify-center items-center relative">
+            <div class = "border-t-8 rounded-full border-[#0874F2] h-72 w-72"></div>
+            <div class = "h-36 absolute top-10"><img src="assets/payoo.png" alt="logo" class = "h-full"></div>
+        </div>
+
+        <!-- form  -->
+        <div class="hero p-8 w-[50%] mx-auto relative top-[-80px]">
+            <div class="hero-content flex-col lg:flex-row-reverse">
+                <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                    <form class="card-body">
+                        <div class="form-control">
+                            <label class="label">
+                                <span class="label-text">Phone Number</span>
+                            </label>
+                            <input id = "phn-num" type="number" placeholder="eg: 01XXXXXXXXX" class="input input-bordered" required />
+                        </div>
+                        <div class="form-control">
+                            <label class="label">
+                                <span class="label-text">PIN</span>
+                            </label>
+                            <input id = "pin" type="number" placeholder="Enter 4 digit pin (1234)" class="input input-bordered" required />
+                        </div>
+                        <div class="form-control mt-6">
+                            <button id = "login-btn" class="btn btn-primary">Login</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
     <script src = "scripts/login.js"></script>
 </body>
 </html>
