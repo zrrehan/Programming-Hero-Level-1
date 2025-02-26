@@ -1,4 +1,4 @@
-const services = ["add-money", "cash-out"];
+const services = ["add-money", "cash-out", "transfer-money", "get-bonus", "pay-bill"];
 document.querySelector("#add-money").style.border = "2px solid #0874F2";
 
 for(let i = 1; i < services.length; i++) {

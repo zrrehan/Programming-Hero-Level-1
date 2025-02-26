@@ -8,5 +8,7 @@ cashOutButton.addEventListener("click", function() {
         let cashOuntWallet = document.querySelector("#wallet-value");
         cashOuntWallet.innerText = (parseFloat(cashOuntWallet.innerText) - amount).toFixed(2);
         alert(`New wallet amount is ${cashOuntWallet.innerText}`)
+    } else {
+        alert("Wrong Pin or No marchent Account Found");
     }
 })

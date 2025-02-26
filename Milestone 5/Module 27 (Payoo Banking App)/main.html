@@ -14,7 +14,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div class = "bg-base-300 w-[500px] mx-auto px-4 pt-4 ">
+    <div class = "bg-base-300 w-[500px] mx-auto px-4 pt-4 min-h-[100vh]">
         <header class="flex justify-between">
             <div class = "flex gap-5">
                 <img class="h-14" src="assets/payoo.png">
@@ -46,15 +46,15 @@
                     <i class="fa-solid fa-sack-dollar text-3xl"></i>
                     <p>Cash Out</p>
                 </div>
-                <div class="border-2 border-black h-20 w-36 flex flex-col items-center justify-center">
+                <div id = "transfer-money" class="border-2 border-black h-20 w-36 flex flex-col items-center justify-center">
                     <i class="fa-solid fa-money-bill-transfer text-3xl"></i>
                     <p>Transfer Money</p>
                 </div>
-                <div class="border-2 border-black h-20 w-36 flex flex-col items-center justify-center">
+                <div id = "get-bonus" class="border-2 border-black h-20 w-36 flex flex-col items-center justify-center">
                     <i class="fa-solid fa-money-bill-trend-up text-3xl"></i>
                     <p>Get Bonus</p>
                 </div>
-                <div class="border-2 border-black h-20 w-36 flex flex-col items-center justify-center">
+                <div id = "pay-bill" class="border-2 border-black h-20 w-36 flex flex-col items-center justify-center">
                     <i class="fa-solid fa-money-bills text-3xl"></i>
                     <p>Pay Bill</p>
                 </div>
@@ -114,15 +114,96 @@
                 <button id="cashOutButton" class="btn btn-primary border-[#0874F2] bg-[#0874F2] text-[white]">Cash Out</button>
             </div>
         </section>
+
+
+        <!-- Transfer Money section -->
+        <section id="transfer-money-section" class="mt-16 flex flex-col items-center gap-5">
+            <h1 class="font-bold text-3xl">Transfer Money</h1>
+            <div class="text-center space-y-5">
+                <div>
+                    <p>User Account Number</p>
+                    <input id="transferSend" type="text" placeholder="eg: 01XXXXXXXXX"
+                        class="input input-bordered border-2 border-black w-full max-w-xs bg-base-300" />
+                </div>
+                <div>
+                    <p>Pin Number</p>
+                    <input id="transferPin" type="text" placeholder="PIN number (1234)"
+                        class="input input-bordered border-2 border-black w-full max-w-xs bg-base-300" />
+                </div>
+                <div>
+                    <p>Money Amount</p>
+                    <input id="transferAmount" type="text" placeholder="Enter Amount"
+                        class="input input-bordered border-2 border-black w-full max-w-xs bg-base-300" />
+                </div>
+                <button id="transferButton" class="btn btn-primary border-[#0874F2] bg-[#0874F2] text-[white]">Transfer</button>
+            </div>
+        </section>
+
+
+        <!-- get bonus section  -->
+        <section id="get-bonus-section" class="mt-16 flex flex-col items-center gap-5">
+            <h1 class="font-bold text-3xl">Transfer Money</h1>
+            <div class="text-center space-y-5">
+                <div>
+                    <p>Enter Bonus Coupon</p>
+                    <input id="Bonus-Cupon" type="text" placeholder="eg: Payoo11"
+                        class="input input-bordered border-2 border-black w-full max-w-xs bg-base-300" />
+                </div>
+                <button id="getBonusButton" class="btn btn-primary border-[#0874F2] bg-[#0874F2] text-[white]">Get Bonus</button>
+            </div>
+        </section>
+
+        <!-- Pay Bill Section -->
+        <section id="pay-bill-section" class="mt-16 flex flex-col items-center gap-5">
+            <h1 class="font-bold text-3xl">Pay Bill</h1>
+            <div class="text-center space-y-5">
+                <div>
+                    <p>Bill Category</p>
+                    <select id="bill-category" class="select border-2 border-black select-ghost w-full max-w-xs bg-base-300">
+                        <option value="notSelected" disabled selected>Select The Bill Category</option>
+                        <option value="Broadband Bill">Broadband</option>
+                        <option value="Electricity Bill">Education</option>
+                        <option value="Gas Bill">Gas</option>
+                        <option value="Water Bill">Water</option>
+                    </select>
+                </div>
+                <div>
+                    <p>Pin Number</p>
+                    <input id="billPin" type="text" placeholder="PIN number (1234)"
+                        class="input input-bordered border-2 border-black w-full max-w-xs bg-base-300" />
+                </div>
+                <div>
+                    <p>Money Amount</p>
+                    <input id="billAmount" type="text" placeholder="Enter Amount"
+                        class="input input-bordered border-2 border-black w-full max-w-xs bg-base-300" />
+                </div>
+                <button id="payBillButton" class="btn btn-primary border-[#0874F2] bg-[#0874F2] text-[white]">Pay Bill</button>
+            </div>
+        </section>
     </div>
+
+    <!-- utility functions  -->
+     <script src = "scripts/utility.js"></script>
 
     <!-- Toggle between services (add money, cash out and others)  -->
     <script src="scripts/toggle.js"></script>
+
+    <!-- add Functionality to Transaction  -->
+    <script src = "scripts/transaction.js"></script>
 
     <!-- add functionality in add money section  -->
     <script src = "scripts/addMoney.js"></script>
 
     <!-- add functionality in cash out section  -->
-     <script src = "scripts/cashOut.js"></script>
+    <script src = "scripts/cashOut.js"></script>
+
+    <!-- add functionality in transfer money section  -->
+    <script src = "scripts/transfer.js"></script>
+
+    <!-- add functionalityin get get bonus  -->
+    <script src = "scripts/getBonus.js"></script>
+
+    <!-- add functionality to pay bill  -->
+    <script src = "scripts/payBill.js"></script>
 </body>
 </html>
