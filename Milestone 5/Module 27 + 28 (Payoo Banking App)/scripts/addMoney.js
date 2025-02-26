@@ -8,6 +8,9 @@ button.addEventListener("click", function() {
         amount = parseFloat(amount);
         let wallet = document.querySelector("#wallet-value"); 
         wallet.innerText = (parseFloat(wallet.innerText) + amount).toFixed(2);
+        allTransaction.push(
+            { transactionName: "Add Money", transactionValue: amount}
+        );
         alert(`New wallet amount is ${wallet.innerText}`)  
     } else {
         alert("Select Correct Pin and Bank Account")

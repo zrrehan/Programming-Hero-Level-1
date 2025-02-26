@@ -13,6 +13,10 @@ function changeMoney(amount, action) {
     let wallet = document.querySelector("#wallet-value");
     let walletValue = parseFloat(wallet.innerText);
     if(action.toLowerCase() === "remove") {
+        if (walletValue - amount < 0) {
+            alert("Not Enough Money");
+            return "no money";
+        }
         walletValue = walletValue - amount;
     } else if(action.toLowerCase() === "add") {
         walletValue = walletValue + amount;
@@ -20,4 +24,8 @@ function changeMoney(amount, action) {
         alert(`${action} Action is not valid`);
     }
     wallet.innerText = walletValue.toFixed(2);
+}
+
+function logOut() {
+    window.location.href = "index.html";
 }

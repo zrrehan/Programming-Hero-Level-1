@@ -19,11 +19,24 @@
             <div class = "flex gap-5">
                 <img class="h-14" src="assets/payoo.png">
                 <div>
-                    <p class = "font-bold text-2xl">$ <span id = "wallet-value">45000.00</span></p>
+                    <p class = "font-bold text-2xl"><span id = "wallet-value">0.00</span>৳</p>
                     <p>Available Balance</p>
                 </div>
             </div>
-            <button class="btn">Log Out</button>
+            <!-- <button class="btn" onclick="logOut()">Log Out</button> -->
+            <button class="btn" onclick="my_modal_1.showModal()">Log Out</button>
+            <dialog id="my_modal_1" class="modal">
+                <div class="modal-box">
+                    <h3 class="text-lg font-bold">Log Out from Payoo</h3>
+                    <p class="py-4">Do you really want to Log Out?</p>
+                    <div class="modal-action">
+                        <button class="btn" onclick="logOut()">Yes</button>
+                        <form method="dialog">
+                            <button class="btn">No</button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
         </header>
         <br>
 
@@ -58,7 +71,7 @@
                     <i class="fa-solid fa-money-bills text-3xl"></i>
                     <p>Pay Bill</p>
                 </div>
-                <div class="border-2 border-black h-20 w-36 flex flex-col items-center justify-center">
+                <div id = "transaction" class="border-2 border-black h-20 w-36 flex flex-col items-center justify-center">
                     <i class="fa-solid fa-coins text-3xl"></i>
                     <p>Transaction</p>
                 </div>
@@ -162,7 +175,7 @@
                     <select id="bill-category" class="select border-2 border-black select-ghost w-full max-w-xs bg-base-300">
                         <option value="notSelected" disabled selected>Select The Bill Category</option>
                         <option value="Broadband Bill">Broadband</option>
-                        <option value="Electricity Bill">Education</option>
+                        <option value="Electricity Bill">Electricity</option>
                         <option value="Gas Bill">Gas</option>
                         <option value="Water Bill">Water</option>
                     </select>
@@ -178,6 +191,25 @@
                         class="input input-bordered border-2 border-black w-full max-w-xs bg-base-300" />
                 </div>
                 <button id="payBillButton" class="btn btn-primary border-[#0874F2] bg-[#0874F2] text-[white]">Pay Bill</button>
+            </div>
+        </section>
+
+        <!-- transaction section  -->
+        <section id = "transaction-section" class="mt-16 flex flex-col items-center gap-5">
+            <h1 class = "font-bold text-3xl">Transaction History</h1>
+            <div id = "transaction-container" class=" space-y-5 w-[100%]">
+                <div class = "text-start bg-red-0 bg-[#f2f2f2] rounded-lg p-3 flex justify-between items-center shadow-lg">
+                    <div class = "flex justify-center items-center gap-3">
+                        <i class="fa-solid fa-bangladeshi-taka-sign"></i>
+                        <div>
+                            <h2 class="font-bold text-2xl">Water Bill</h2>
+                            <p class="text-2xl">$<span>400</span></p>
+                        </div>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
             </div>
         </section>
     </div>
