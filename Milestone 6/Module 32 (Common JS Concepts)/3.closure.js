@@ -32,3 +32,4 @@ let myFunct = sum(); // myFunct is a closure
 myFunct();
 myFunct();
 myFunct();
+myFunct();
