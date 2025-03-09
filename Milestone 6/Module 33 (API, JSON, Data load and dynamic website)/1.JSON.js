@@ -5,15 +5,16 @@
 
 let person = {
     name: "Cristiano",
-    number: 7, 
+    number: 7,
     team: ["Portugal", "Al-Nassr"],
     isAthelete: true
-}
+};
 
-// converting to JSON 
-let jsonPerson = JSON.stringify(person)
-console.log(jsonPerson) // Json typeof is string
+// Converting the JavaScript object to a JSON string
+let jsonPerson = JSON.stringify(person);
+console.log(jsonPerson); // JSON is a string representation of the object
 
-// converting Json to normal previous data structure 
+
+// Converting the JSON string back to the original JavaScript object
 let prevPerson = JSON.parse(jsonPerson);
 console.log(prevPerson); // this is the previous object 
