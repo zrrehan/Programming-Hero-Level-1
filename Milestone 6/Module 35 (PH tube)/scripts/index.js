@@ -65,23 +65,23 @@ const showAllVideos = async (category = "all", allVideo = []) => {
             <figure>
                 <img class = "h-[200px] w-full object-cover" src=${items.thumbnail} alt="Thumbnail" />
             </figure>
-            <div class = "absolute top-[170px] left-[270px] mr-0 text-center text-white bg-[#26262670] w-24 rounded-lg ">
-                ${(parseInt(Math.random() * 25))} : ${(parseInt((Math.random() + 0.15) * 59))}
-            </div>
-            <div class="flex gap-4 mt-3 ml-5">
-                <div class="avatar w-12 h-12">
-                    <div class="w-full rounded-full">
-                        <img src="${items.authors[0].profile_picture}" />
+            <div class="flex justify-around gap-4 mt-3 ml-5">
+                <div class = "flex justify-center gap-5">
+                    <div class="avatar w-12 h-12">
+                        <div class="w-full rounded-full">
+                            <img src="${items.authors[0].profile_picture}" />
+                        </div>
+                    </div>
+                    <div>
+                        <h2 class="card-title">${items.title}</h2>
+                        <div class = "flex gap-3">
+                            <span >${items.authors[0].profile_name}</span>
+                            ${verification}
+                        </div>
+                        <p>${items.others.views} views</p>
                     </div>
                 </div>
-                <div>
-                    <h2 class="card-title">${items.title}</h2>
-                    <div class = "flex gap-3">
-                        <span >${items.authors[0].profile_name}</span>
-                        ${verification}
-                    </div>
-                    <p>${items.others.views} views</p>
-                </div>
+                <button class = "btn">Watch</button>
             </div>
         </div>
         
