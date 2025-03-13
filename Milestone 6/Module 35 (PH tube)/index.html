@@ -8,6 +8,21 @@
     <!-- CDN of Daisy UI and Tailwind  -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style>
+        button:hover {
+            background-color: #FF1F3D;
+            color: white;
+        }
+        .active-button {
+            background-color: #FF1F3D;
+            color: white;
+        }
+
+        .active-button:hover {
+            background-color: #cb353f;
+        }
+    </style>
 </head>
 <body>
     <section class = "w-11/12 max-w-[1320px] mx-auto pt-7">
@@ -23,7 +38,14 @@
         </header>
 
         <div id="categories" class = "flex justify-center gap-12 mt-5">
-            <button class = "btn btn-error bg-[#FF1F3D] text-white hover:bg-[#cb353f]">All</button>
+            <button id = "btn-all" onclick="buttonToggle()" class = "btn active-button">All</button>
+        </div>
+
+        <main class = "grid grid-cols-3 gap-14 mt-4"></main>
+
+        <div id="nothing" class = "w-[433px] mx-auto text-center">
+            <div class = "flex justify-center items-center"><img src="assets/Icon.png" alt=""></div>
+            <h2 class = "text-[#171717] font-bold text-[32px]">Oops!! Sorry, There is no content here</h2>
         </div>
     </section>
 
