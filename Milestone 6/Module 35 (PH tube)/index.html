@@ -32,9 +32,15 @@
                 <img src="assets/Logo.png">
             </div>
 
-            <button class = "btn">Sort by view</button>
-
-            <button class = "btn btn-error bg-[#FF1F3D] text-white hover:bg-[#cb353f]">Blog</button>
+            <label class="input" style = "width: 500px;">
+                <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none" stroke="currentColor">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.3-4.3"></path>
+                    </g>
+                </svg>
+                <input id = "search-bar" type="search" required placeholder="Search" />
+            </label>
         </header>
 
         <div id="categories" class = "flex justify-center gap-12 mt-5">
@@ -51,5 +57,6 @@
 
 
     <script src = "scripts/index.js"></script>
+    <script src = "scripts/search.js"></script>
 </body>
 </html>

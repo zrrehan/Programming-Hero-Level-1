@@ -34,12 +34,14 @@ function helloFunc() {
 }
 
 
-const showAllVideos = async (category = "all") => {
+const showAllVideos = async (category = "all", allVideo = []) => {
     let videos;
     if(category == "all") {
         let response = await fetch("https://openapi.programming-hero.com/api/phero-tube/videos");
         let data = await response.json();
         videos = data.videos
+    } else if(category == "custom") {
+        videos = allVideo;
     } else {
         let response = await fetch(`https://openapi.programming-hero.com/api/phero-tube/category/${category}`);
         let data = await response.json();
