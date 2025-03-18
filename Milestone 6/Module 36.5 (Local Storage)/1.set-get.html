@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="setLocalStorageData()">Set Rehan</button>
+    <button onclick="getLocalStorageData()">Get Rehan</button>
+    <button onclick = "clearLocalStorage()">Clear Data</button>
+    
+    <script>
+        // 1. go to inspect 
+        // 2. then choose Application 
+        // 3. then choose Local Storage
+        
+        function setLocalStorageData() {
+            localStorage.setItem("Name", "rehan");
+        }
+
+        function getLocalStorageData() {
+            let name = localStorage.getItem("Name");
+            console.log(name);
+        }
+
+        function clearLocalStorage() {
+            localStorage.clear()
+        }
+    </script>
+</body>
+</html>
