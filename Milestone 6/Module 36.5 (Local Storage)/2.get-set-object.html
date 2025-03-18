@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="set()">Set Person</button>
+    <button onclick = "get()">Get Person</button>
+
+    <script>
+        let person  = {
+            name: "Cristiano",
+            age: 40,
+            club: "Al-Nassr"
+        }
+
+        function set() {
+            let personString = JSON.stringify(person);
+            localStorage.setItem("person", personString);
+        } 
+
+        function get() {
+            let personString = localStorage.getItem("person");
+            let person = JSON.parse(personString);
+            console.log(person);
+        }
+    </script>
+</body>
+</html>
