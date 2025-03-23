@@ -4,7 +4,7 @@ function Greeting() {
     );
 }
 
-function Main() {
+function Component() {
     return (
         // Greeting is a component here
         <>
@@ -14,4 +14,4 @@ function Main() {
     );
 }
 
-export default Main;
+export default Component;

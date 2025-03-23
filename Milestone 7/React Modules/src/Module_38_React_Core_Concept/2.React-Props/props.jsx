@@ -1,5 +1,6 @@
 // Without Destucturing 
 function Person(props) {
+    // Props is a JS object 
     return(
         <>
             <p>Name is <b>{props.name}</b></p>
