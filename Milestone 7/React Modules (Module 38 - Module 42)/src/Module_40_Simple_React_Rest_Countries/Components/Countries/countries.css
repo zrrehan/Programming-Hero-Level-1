@@ -1,0 +1,15 @@
+.counntry-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.country {
+    border: 2px solid;
+}
+.visited {
+    border-color:chartreuse
+}
+
+.not-visited {
+    border-color: tomato;
+}

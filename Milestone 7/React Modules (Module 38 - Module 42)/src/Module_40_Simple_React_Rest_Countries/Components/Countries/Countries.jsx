@@ -1,15 +1,20 @@
-import { use } from "react";
+import { use, useState } from "react";
 import Country from "./Country";
+import "./countries.css"
+
 function Countries({ countryPromise }) {
     let countryInfo = use(countryPromise);
-    // let countryInfo = countryPromise.then((res) => console.log(res,1))
-    console.log(countryInfo);
+    let [countryCount, setCountryCount] = useState(0);
+
     return(
         <div>
-           {
-            countryInfo.map((country) => <Country info = {country}></Country>)
-           }
-       </div>
+            <h1>Total Visited: {countryCount}</h1>
+            <div className = "counntry-container">
+                {
+                    countryInfo.map((country) => <Country info={country} countryCount={countryCount} setCountryCount={setCountryCount}></Country>)
+                }
+            </div>
+        </div>
     );
 }
 
