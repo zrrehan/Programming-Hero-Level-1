@@ -1,13 +1,24 @@
 import { useState } from "react";
 import "./countries.css";
 
-function Country({ info, setCountryCount, countryCount }) {
+function Country({ info, setCountryCount, countryCount, addInList, deleteFromList }) {
     const [visited, setVisited] = useState(false);
+    function addCountry() {
+        addInList(info.name.common);
+        setCountryCount(countryCount + 1)
+    }
+
+    function deleteCountry() {
+        deleteFromList(info.name.common);
+        setCountryCount(countryCount - 1)
+    }
+
     function vistedHandler() {
         visited ?
-            setCountryCount(countryCount - 1)
-            : setCountryCount(countryCount + 1)
+            deleteCountry()
+            : addCountry()
         setVisited(!visited);
+
     }
 
     return(
