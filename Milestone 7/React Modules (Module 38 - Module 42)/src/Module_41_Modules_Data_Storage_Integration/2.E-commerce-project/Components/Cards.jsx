@@ -1,13 +1,12 @@
 import { use } from "react";
 import SingleCard from "./SingleCard";
 
-function Cards({ productPromise }) {
+function Cards({ productPromise, setCart }) {
     let prodcutData = use(productPromise);
-    console.log(prodcutData);
     return(
         <div className="flex flex-wrap justify-between gap-10">
             {
-                prodcutData.map((product) => <SingleCard product = {product}></SingleCard>)
+                prodcutData.map((product) => <SingleCard product={product} setCart={setCart}></SingleCard>)
             }
         </div>
     );

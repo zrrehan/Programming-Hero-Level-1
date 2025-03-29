@@ -1,4 +1,6 @@
-function SingleCard({ product }) {
+import { add } from "../utilities";
+
+function SingleCard({ product, setCart }) {
     return(
         <div className="card w-96 shadow-sm bg-blue-950">
             <figure className="bg-white">
@@ -10,7 +12,7 @@ function SingleCard({ product }) {
                 <h2 className="card-title text-white">{product.title}</h2>
                 <p className="text-xl font-bold text-white">Price - ${product.price}</p>
                 <div className="card-actions justify-end">
-                    <button className="btn ">Add To Cart</button>
+                    <button className="btn" onClick={() => add(product.id, product.title, product.price,product.image, setCart)}>Add To Cart</button>
                 </div>
             </div>
         </div>
