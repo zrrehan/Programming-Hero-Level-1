@@ -12,6 +12,8 @@ React Modules (Module 38 - Module 42)/
 │   ├── module-40/
 │   ├── module-41/
 │   ├── module-42/
+|   ├── App.jsx
+|   ├── main.jsx
 │── .gitignore
 │── eslint.config.js
 │── index.html
