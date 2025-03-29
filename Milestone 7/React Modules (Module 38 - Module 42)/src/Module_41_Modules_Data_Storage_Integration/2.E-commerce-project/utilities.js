@@ -15,7 +15,6 @@ function add(itemId, itemName, itemPrice, itemImg, setCart) {
         showConfirmButton: false,
         timer: 1000
     });
-
     localStorage.setItem("cart", JSON.stringify(cart));
     setCart(cart)
 }
@@ -36,15 +35,17 @@ function manageCartItem(id, setCart) {
         text: "You won't be able to revert this!",
         icon: "warning",
         showCancelButton: true,
-        confirmButtonColor: "#3085d6",
-        cancelButtonColor: "#d33",
-        confirmButtonText: "Yes, delete it!"
+        confirmButtonColor: "#d33",
+        cancelButtonColor: "#3085d6",
+        confirmButtonText: "Yes, delete it!",
+        scrollbarPadding: false
     }).then((result) => {
         if (result.isConfirmed) {
             Swal.fire({
                 title: "Deleted!",
-                text: "Your file has been deleted.",
-                icon: "success"
+                text: "Item removed from the cart",
+                icon: "success",
+                scrollbarPadding: false
             });
             let cart = getCart();
             delete cart[id];
@@ -56,7 +57,10 @@ function manageCartItem(id, setCart) {
 
 function buyAll(setCart) {
     localStorage.clear();
-    Swal.fire("Track Your Order...");
+    Swal.fire({
+        title: "Track Your Order...",
+        scrollbarPadding: false
+    });
     setCart({});
 }
 

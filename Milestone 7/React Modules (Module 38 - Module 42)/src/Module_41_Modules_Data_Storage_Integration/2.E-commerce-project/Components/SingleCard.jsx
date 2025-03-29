@@ -2,7 +2,7 @@ import { add } from "../utilities";
 
 function SingleCard({ product, setCart }) {
     return(
-        <div className="card w-96 shadow-sm bg-blue-950">
+        <div className="card w-96 shadow-sm bg-gradient-to-r from-blue-950 to-indigo-500">
             <figure className="bg-white">
                 <img className=" h-[183px] object-cover"
                     src={product.image}

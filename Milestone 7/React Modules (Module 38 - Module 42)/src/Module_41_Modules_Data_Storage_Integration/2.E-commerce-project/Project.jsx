@@ -1,6 +1,6 @@
 import Header from "./Components/Header";
 import Cards from "./Components/Cards";
-import { cache, Suspense, useState } from "react";
+import { cache, Suspense, useMemo, useState } from "react";
 
 async function fetchPromise(url) {
     let res = await fetch(url);
@@ -16,7 +16,10 @@ function Project() {
         <div className="skeleton w-[384px] h-[369px]"></div>
     </div>
 
-    let productPromise = fetchPromise("https://fakestoreapi.com/products") ;
+    let productPromise = useMemo(() => {
+        return fetchPromise("https://fakestoreapi.com/products") 
+    }, []);
+    console.log(productPromise)
 
     return(
         <div>

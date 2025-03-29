@@ -9,7 +9,7 @@ function Header({setCart}) {
         cartSelected = false
     }
     return(
-        <div className = "flex justify-between w-11/12 mx-auto bg-blue-950 h-12 items-center p-2.5 rounded-2xl">
+        <div className= "flex justify-between w-11/12 mx-auto bg-gradient-to-r from-indigo-500 via-purple-500 to-blue-950 h-12 items-center p-8 rounded-2xl">
             <h1 className="text-4xl font-bold text-white">E-Commerce.io</h1>
 
             <div className="drawer drawer-end w-[50px]">
