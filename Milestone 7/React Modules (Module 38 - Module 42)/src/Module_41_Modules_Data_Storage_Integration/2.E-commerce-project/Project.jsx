@@ -11,6 +11,7 @@ let productPromise = fetchPromise("https://fakestoreapi.com/products")
 
 function Project() {
     const [cart, setCart] = useState({});
+    const [filter, setFilter] = useState("");
     let skeleton = <div className="flex justify-between flex-wrap gap-4">
         <div className="skeleton w-[384px] h-[369px]"></div>
         <div className="skeleton w-[384px] h-[369px]"></div>
@@ -18,17 +19,13 @@ function Project() {
         <div className="skeleton w-[384px] h-[369px]"></div>
     </div>
 
-    // let productPromise = useMemo(() => {
-    //     return fetchPromise("https://fakestoreapi.com/products") 
-    // }, []);
-    // console.log(productPromise)
 
     return(
         <div>
-            <Header setCart={setCart}></Header>
+            <Header setCart={setCart} setFilter={setFilter}></Header>
             <div className="w-11/12 mx-auto mt-14">
                 <Suspense fallback={skeleton}>
-                    <Cards productPromise={productPromise} setCart={setCart}></Cards>
+                    <Cards productPromise={productPromise} setCart={setCart} filter={filter}></Cards>
                 </Suspense>
             </div>
         </div>

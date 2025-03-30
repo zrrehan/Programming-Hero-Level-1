@@ -2,7 +2,7 @@ import button from "daisyui/components/button";
 import { getCart, buyAll } from "../utilities";
 import CartCard from "./cartCard";
 
-function Header({setCart}) {
+function Header({ setCart, setFilter }) {
     let cartItems = getCart();
     let cartSelected = true;
     if(JSON.stringify(cartItems) === "{}"){
@@ -11,6 +11,11 @@ function Header({setCart}) {
     return(
         <div className= "flex justify-between w-11/12 mx-auto bg-gradient-to-r from-blue-950 via-purple-500 to-indigo-500 h-12 items-center p-8 rounded-2xl">
             <h1 className="text-4xl font-bold text-white">E-Commerce.io</h1>
+
+            <label className="input rounded-4xl">
+                <svg className="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g strokeLinejoin="round" strokeLinecap="round" strokeWidth="2.5" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></g></svg>
+                <input type="search" placeholder="Search" onChange={(event) => setFilter(event.target.value)}/>
+            </label>
 
             <div className="drawer drawer-end w-[50px]">
                 <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />

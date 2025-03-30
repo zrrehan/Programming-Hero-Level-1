@@ -64,4 +64,10 @@ function buyAll(setCart) {
     setCart({});
 }
 
-export {add, getCart, manageCartItem, buyAll};
+function filteredItem(prodcutData, filter) {
+    return prodcutData.filter((data) => {
+        return data.title.toLowerCase().includes(filter.toLowerCase()) || data.category.toLowerCase().includes(filter.toLowerCase());
+    });
+}
+
+export {add, getCart, manageCartItem, buyAll, filteredItem};
