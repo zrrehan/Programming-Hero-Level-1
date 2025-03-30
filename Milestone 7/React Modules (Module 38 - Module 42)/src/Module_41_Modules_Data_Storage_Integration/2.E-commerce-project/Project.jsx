@@ -7,6 +7,8 @@ async function fetchPromise(url) {
     return res.json();
 }
 
+let productPromise = fetchPromise("https://fakestoreapi.com/products")
+
 function Project() {
     const [cart, setCart] = useState({});
     let skeleton = <div className="flex justify-between flex-wrap gap-4">
@@ -16,10 +18,10 @@ function Project() {
         <div className="skeleton w-[384px] h-[369px]"></div>
     </div>
 
-    let productPromise = useMemo(() => {
-        return fetchPromise("https://fakestoreapi.com/products") 
-    }, []);
-    console.log(productPromise)
+    // let productPromise = useMemo(() => {
+    //     return fetchPromise("https://fakestoreapi.com/products") 
+    // }, []);
+    // console.log(productPromise)
 
     return(
         <div>
