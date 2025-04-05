@@ -1,4 +1,3 @@
-import button from "daisyui/components/button";
 import { getCart, buyAll } from "../utilities";
 import CartCard from "./cartCard";
 
