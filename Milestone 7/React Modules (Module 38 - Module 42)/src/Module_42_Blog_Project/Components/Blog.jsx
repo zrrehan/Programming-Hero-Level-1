@@ -1,7 +1,15 @@
+import { useState } from "react";
 import { FaBookmark } from "react-icons/fa";
 
-function Blog({ blogData }) {
-    const { id, cover, title, author, hashtags, author_img } = blogData;
+function Blog({ blogData, addBookmark, markedAsRead, increaseReadingTime }) {
+    const { id, cover, title, author, hashtags, author_img, reading_time } = blogData;
+    const [disable, setDisable] = useState(false);
+
+    function buttonHandler() {
+        markedAsRead(id);
+        setDisable(true);
+        increaseReadingTime(reading_time)
+    }
     
     return(
         <div>
@@ -27,10 +35,10 @@ function Blog({ blogData }) {
                         }
                     </div>
                     <div className="card-actions justify-end ">
-                        <button className="btn btn-circle">
+                        <button className="btn btn-circle" onClick={() => !disable ? addBookmark({id: id, title: title}): null}>
                             <FaBookmark />
                         </button>
-                        <button className="btn btn-primary">Mark As Read</button>
+                        <button className="btn btn-primary" disabled = {disable}  onClick={buttonHandler}>Mark As Read</button>
                     </div>
                 </div>
             </div>
