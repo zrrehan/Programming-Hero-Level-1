@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Ronaldo",
+        "assists": 7,
+        "goals": 18
+    },
+    {
+        "name": "Messi",
+        "assists": 10,
+        "goals": 15
+    },
+    {
+        "name": "Neymar",
+        "assists": 8,
+        "goals": 12
+    },
+    {
+        "name": "Mbappe",
+        "assists": 6,
+        "goals": 14
+    },
+    {
+        "name": "Haaland",
+        "assists": 5,
+        "goals": 16
+    },
+    {
+        "name": "Benzema",
+        "assists": 4,
+        "goals": 11
+    }
+]
