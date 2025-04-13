@@ -2,7 +2,6 @@ import Header from "./components/Header";
 import Pricing from "./components/Pricing";
 import Recharts from "./components/Recharts";
 import { Suspense } from "react";
-import Carousel from "./components/Carousel";
 import axios from "axios";
 
 
