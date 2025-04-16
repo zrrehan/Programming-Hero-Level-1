@@ -3,7 +3,8 @@ import BasicsLarger from "./2.basicsLarger/BasicsLarger";
 import Navigation from "./3.navigation/Navigation";
 import Nav from "./4.navNfetchAPI/Nav";
 import NavigateHook from "./5.useNavigateHook/NavigateHook";
-
+import UseNavigation from "./6.useNavigation.jsx/UseNavigation";
+import Params from "./7.useParams/Params";
 
 function Module45() {
     return(
@@ -11,7 +12,9 @@ function Module45() {
         // <BasicsLarger></BasicsLarger>
         // <Navigation></Navigation>
         // <Nav></Nav>
-        <NavigateHook></NavigateHook>
+        // <NavigateHook></NavigateHook>
+        // <UseNavigation></UseNavigation>
+        <Params></Params>
     );
 }
 
