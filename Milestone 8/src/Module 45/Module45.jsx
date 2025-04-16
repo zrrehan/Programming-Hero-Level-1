@@ -5,6 +5,7 @@ import Nav from "./4.navNfetchAPI/Nav";
 import NavigateHook from "./5.useNavigateHook/NavigateHook";
 import UseNavigation from "./6.useNavigation.jsx/UseNavigation";
 import Params from "./7.useParams/Params";
+import UseLocation from "./8.useLocation/UseLocation";
 
 function Module45() {
     return(
@@ -14,7 +15,8 @@ function Module45() {
         // <Nav></Nav>
         // <NavigateHook></NavigateHook>
         // <UseNavigation></UseNavigation>
-        <Params></Params>
+        // <Params></Params>
+        <UseLocation></UseLocation>
     );
 }
 
