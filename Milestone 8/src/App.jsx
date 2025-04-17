@@ -1,6 +1,6 @@
 import Module44 from "./Module 44/Module44";
 import Module45 from "./Module 45/Module45";
-import Module46 from "./Module46/Module46";
+import Module46 from "./Module 46/Module46";
 function App() {
     return (
         <>
