@@ -32,7 +32,7 @@ export default function PageToRead() {
     console.log(filteredData);
     
     return(
-        <div className="mt-[100px]">
+        <div className="mt-[100px] w-full">
             <BarChart width= {1200} height={500} data={filteredData} margin={{ top: 20, right: 30, left: 20, bottom: 5, }}>
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="bookName" />

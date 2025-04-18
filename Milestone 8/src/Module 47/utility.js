@@ -1,7 +1,11 @@
+import { ToastContainer, toast } from 'react-toastify';
+
 function dbAdd(category, id) {
     let storageArray = dbGet(category);
     if (storageArray && storageArray.includes(id)) {
-        alert("The Book is already added");
+        toast.warn("The Book is already added", {
+            autoClose: 2000,
+        });
     } else {
         if(!storageArray) {
             storageArray = [] 
@@ -9,7 +13,9 @@ function dbAdd(category, id) {
 
         let newStorage = [...storageArray, id];
         localStorage.setItem(category, JSON.stringify(newStorage))
-        alert("Book added");
+        toast.success('The Book has added to the list', {
+            autoClose: 2000,
+        });
     }
 }
 

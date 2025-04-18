@@ -47,7 +47,7 @@ function Card({item}) {
                     <div class="badge badge-soft badge-info px-[40px] py-[21px]  rounded-4xl text-[16px]">Category: {category}</div>
                     <div class="badge badge-soft badge-warning px-[20px] py-[21px] rounded-4xl text-[16px]">Rating: {rating}</div>
                     <Link to={`/description/${bookId}`}>
-                        <button class="btn btn-success px-[40px] py-[21px] rounded-4xl">View Details</button>
+                        <button class="btn green-btn px-[40px] py-[21px] rounded-4xl text-[16px]">View Details</button>
                     </Link>
                 </div>
 

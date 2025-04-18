@@ -10,8 +10,8 @@ function Navbar() {
                 <NavLink to = "/pages-to-read"><button className="btn">Pages to Read</button></NavLink>
             </div>
             <div className="space-x-4">
-                <button className="btn px-[28px] py-[18px]">Sign In</button>
-                <button className="btn px-[28px] py-[18px]">Sign Up</button>
+                <button className="btn px-[28px] py-[18px] green-btn rounded-lg">Sign In</button>
+                <button className="btn secondary-btn px-[28px] py-[18px] rounded-lg">Sign Up</button>
             </div>
         </div>
     )

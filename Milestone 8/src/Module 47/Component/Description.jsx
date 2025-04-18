@@ -8,7 +8,7 @@ function Description() {
     let specificData = data.find((item) => item.bookId == id);
     const {bookId, image, bookName, author, review, tags, category, totalPages, rating, yearOfPublishing, publisher } = specificData
     return(
-        <div className="lg:flex justify-start gap-[5%] h-[711px] ">
+        <div className="lg:flex mt-24 justify-start gap-[5%] h-[711px] ">
             {/* image container  */}
             <div className="w-[45%] rounded-2xl h-full bg-[rgba(19,19,19,0.05)] flex justify-center items-center">
                 <div className="h-[564px]">
@@ -51,7 +51,7 @@ function Description() {
                 </table>
                 <div className="flex gap-5">
                     <button className="btn" onClick={() => dbAdd("read", bookId)}>Read</button>
-                    <button className="btn" onClick={() => dbAdd("wishlist", bookId)}>Wishlist</button>
+                    <button className="btn secondary-btn" onClick={() => dbAdd("wishlist", bookId)}>Wishlist</button>
                 </div>
             </div>
         </div>

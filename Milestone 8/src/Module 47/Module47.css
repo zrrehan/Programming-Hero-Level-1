@@ -10,3 +10,31 @@
 .header-font {
     font-family: "Playfair Display", serif;
 }
+
+.green-btn {
+    background-color: #23BE0A;
+    color: white;
+}
+
+.green-btn:hover {
+    background-color: #188607;
+}
+
+.secondary-btn {
+    background-color: #59C6D2;
+    color: white;
+}
+
+.secondary-btn:hover {
+    background-color: #3d9099b8;
+}
+
+a.active > button {
+    background-color: white;
+    color: #23BE0A;
+    border-color: #23BE0A;
+}
+
+html {
+    scroll-behavior: smooth;
+}

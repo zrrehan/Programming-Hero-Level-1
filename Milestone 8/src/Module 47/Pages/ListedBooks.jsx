@@ -16,7 +16,7 @@ function ListedBooks() {
             </div>
             <div className="text-center py-[33px] font-bold text-[28px] rounded-2xl">
                 <div className="dropdown dropdown-center">
-                    <div tabIndex={0} role="button" className="btn m-1">
+                    <div tabIndex={0} role="button" className="btn m-1 green-btn">
                         Sort By 
                         <IoIosArrowDown />
                     </div>
