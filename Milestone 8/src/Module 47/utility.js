@@ -14,7 +14,12 @@ function dbAdd(category, id) {
 }
 
 function dbGet(category) {
-    return JSON.parse(localStorage.getItem(category))
+    let data = JSON.parse(localStorage.getItem(category))
+    if(data) {
+        return data;
+    } else {
+        return [];
+    }
 }
 
 export {dbGet, dbAdd};

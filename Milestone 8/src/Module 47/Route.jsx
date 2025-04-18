@@ -3,6 +3,7 @@ import Root from "./Pages/Root";
 import Home from "./Pages/Home";
 import Description from "./Component/Description";
 import ListedBooks from "./Pages/ListedBooks";
+import PageToRead from "./Pages/PageToRead";
 
 const router = createBrowserRouter([
     {
@@ -11,7 +12,11 @@ const router = createBrowserRouter([
         children: [
             {index:true, Component: Home},
             {path: "listed-books", Component: ListedBooks},
-            { path: "pages-to-read", element: <div>pages to read</div>},
+            { 
+                path: "pages-to-read",
+                loader: () => fetch("https://raw.githubusercontent.com/ProgrammingHero1/boi-poka-Book-Vibe-Resources/refs/heads/main/data/booksData.json"),
+                Component: PageToRead
+            },
             {
                 path: "description/:id",
                 loader: () => fetch("https://raw.githubusercontent.com/ProgrammingHero1/boi-poka-Book-Vibe-Resources/refs/heads/main/data/booksData.json"), 
