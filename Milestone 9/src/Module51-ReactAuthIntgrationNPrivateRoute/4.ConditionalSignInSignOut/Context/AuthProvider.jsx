@@ -4,23 +4,27 @@ import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndP
 import { useEffect, useState } from "react";
 function AuthProvider({children}) {
     const [user, setUser] = useState(null);
+    const [loading, setLoading] = useState(true);
 
     function createUser(email, password) {
+        setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password)
     }
 
     function loginUser(email, password) {
+        setLoading(false);
         return signInWithEmailAndPassword(auth, email, password);
     }
 
     function logOut() {
-        console.log("Hello")
+        setLoading(false);
         return signOut(auth)
     }
 
     useEffect(() => {
         const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
             setUser(currentUser);
+            setLoading(false);
         })
 
         return(() => {
@@ -30,7 +34,7 @@ function AuthProvider({children}) {
     
     
     const userInfo = {
-        createUser, loginUser, user, logOut
+        createUser, loginUser, user, logOut, loading
     }
     
     return(

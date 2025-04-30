@@ -11,6 +11,7 @@ function Navbar() {
         <NavLink className="btn" to = "/"> Home </NavLink>
         <NavLink className="btn" to = "/login"> Login </NavLink>
         <NavLink className="btn" to = "/register"> Register </NavLink>
+        <NavLink className="btn" to="/dashboard"> Dashboard </NavLink>
         {
             user && <>
                 <NavLink className="btn" to="/orders"> Orders </NavLink>

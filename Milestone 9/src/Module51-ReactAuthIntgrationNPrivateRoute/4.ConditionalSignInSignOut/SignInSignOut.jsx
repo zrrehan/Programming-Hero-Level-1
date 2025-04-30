@@ -7,6 +7,8 @@ import { createContext } from "react";
 import AuthProvider from "./Context/AuthProvider";
 import Orders from "./Routes/Orders";
 import PrivateRoute from "./Routes/PrivateRoute";
+import Profile from "./Routes/Profile";
+import Dashboard from "./Routes/Dashboard";
 
 
 // export const AuthContext = createContext(null);
@@ -24,6 +26,18 @@ const router = createBrowserRouter([
                 path: "orders",
                 element: <PrivateRoute>
                     <Orders></Orders>
+                </PrivateRoute>
+            },
+            {
+                path: "profile",
+                element: <PrivateRoute>
+                    <Profile></Profile>
+                </PrivateRoute>
+            }, 
+            {
+                path: "dashboard",
+                element: <PrivateRoute>
+                    <Dashboard></Dashboard>
                 </PrivateRoute>
             }
         ]
