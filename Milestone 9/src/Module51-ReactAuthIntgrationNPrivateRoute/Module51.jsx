@@ -1,24 +1,9 @@
-import { createBrowserRouter,RouterProvider } from "react-router";
-import Root from "./Routes/Root";
-import Login from "./Routes/Login"; 
-import Home from "./Routes/Home";
-import Register from "./Routes/Register";
-
-const router = createBrowserRouter([
-    {
-        path: "/",
-        Component: Root,
-        children: [
-            {index: true, Component: Home},
-            {path: "login", Component: Login},
-            {path: "register", Component: Register}
-        ]
-    },
-]);
-
+import NormalContextAPI from "./1.NormalContextAPI/NormalContextAPI";
+import ProContextAPI from "./2.ProContextAPI/ProContextAPI";
 function Module51() {
     return(
-        <RouterProvider router={router} />
+        // <NormalContextAPI></NormalContextAPI>
+        <ProContextAPI></ProContextAPI>
     )
 }
 

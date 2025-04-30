@@ -1,5 +1,11 @@
+import { use } from "react";
 import { NavLink } from "react-router";
+import { AuthContext } from "../Context/AuthContext";
+
 function Navbar() {
+    const userInfo = use(AuthContext);
+    console.log(userInfo);
+
     const links = <div className="space-x-4">
         <NavLink className="btn" to = "/"> Home </NavLink>
         <NavLink className="btn" to = "/login"> Login </NavLink>
