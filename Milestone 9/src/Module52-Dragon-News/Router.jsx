@@ -1,14 +1,16 @@
-import { createBrowserRouter } from "react-router";
+import { createBrowserRouter, Navigate } from "react-router";
 import Home from "./Routes/Home";
 import Category from "./Components/Category";
 import { Suspense } from "react";
+import Register from "./Components/Register";
+import Login from "./Components/Login";
 
 export const router = createBrowserRouter([
     {
         path: "/",
         element: <Home></Home>,
         children: [
-            {index: true, element: <h1>Default Route</h1>},
+            { index: true, element: <Navigate to= "/category/0"></Navigate>},
             {
                 path: "/category/:id", 
                 element: <Suspense fallback={<div><span className="loading loading-spinner loading-xl"></span></div>}>
@@ -16,5 +18,14 @@ export const router = createBrowserRouter([
                 </Suspense>
             }
         ]
-    }
+    },
+    {
+        path: "auth/register",
+        Component: Register
+    },
+    {
+        path: "auth/login",
+        Component: Login
+    } 
+
 ])

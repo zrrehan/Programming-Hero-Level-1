@@ -1,5 +1,6 @@
 import Marquee from "react-fast-marquee";
 import userDemoPic from "../assets/user.png"
+import { Link } from "react-router";
 
 function Navbar() {
     return(
@@ -16,7 +17,9 @@ function Navbar() {
                 <div className="bg-red-300">
                     <img src={userDemoPic} alt="User's Profile Picture" />
                 </div>
-                <button className="btn bg-blackBtn text-white px-6"> Login </button>
+                <Link to = "/auth/login">
+                    <button className="btn bg-blackBtn text-white px-6"> Login </button>
+                </Link>
             </div>
         </div>
         

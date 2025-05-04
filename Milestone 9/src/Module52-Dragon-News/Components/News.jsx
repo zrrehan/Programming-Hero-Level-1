@@ -31,7 +31,7 @@ function News({newsData}) {
             <div className="p-6 border border-[#E7E7E7] border-t-0 rounded-b-2xl">
                 <h1 className="font-bold text-[#403F3F] text-[20px] text-start">{title}</h1>
 
-                <div className="w-full h-[262px] rounded-xl">
+                <div className="w-full h-[262px] rounded-xl my-4">
                     <img src={image_url} alt="" className="h-full w-full rounded-xl object-cover" />
                 </div>
 
