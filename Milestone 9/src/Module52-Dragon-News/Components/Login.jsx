@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 import HeaderUp from "./HeaderUp";
+import { IoIosArrowBack } from "react-icons/io";
 
 function Login() {
     return(
@@ -17,6 +18,12 @@ function Login() {
                         <button className="btn bg-blackBtn text-white mt-4">Login</button>
                         <p>Don't have any account? <Link to = "/auth/register" className="text-blue-500 underline">Register Now</Link></p>
                     </fieldset>
+                    <Link to = "/">
+                        <button className="btn">
+                            <IoIosArrowBack />
+                            Go Back to Home
+                        </button>
+                    </Link>
                 </div>
             </div>
         </div>
