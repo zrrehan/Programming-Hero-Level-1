@@ -7,12 +7,11 @@ const googleProvider = new GoogleAuthProvider();
 
 function AuthProvider({children}) {
     const [userImage, setUserImage] = useState("");
+    const [loading, setLoading] = useState(true);
     function createUser(email, password) {
         setUserImage("");
+        setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password)
-            .then((result) => {
-                setUserImage(result.photoURL)
-            })
     }
 
     function updateUser(name, image) {
@@ -25,23 +24,30 @@ function AuthProvider({children}) {
 
     function logOut() {
         setUserImage("");
+        setLoading(true);
         return signOut(auth);
     }
 
     function login(email, password) {
-        setUserImage("")
+        setUserImage("");
+        setLoading(true);
         return signInWithEmailAndPassword(auth, email, password)
     }
 
     function googleLogin() {
         setUserImage("")
-        return signInWithPopup(auth, googleProvider);
+        setLoading(true);
+        return signInWithPopup(auth, googleProvider)
+            .then((result) => {
+                console.log(result.user.photoURL)
+                setUserImage(result.user.photoURL)
+            });
     }
 
     useEffect(() => {
         let unSubscribe = onAuthStateChanged(auth, (user) => {
             setUserImage(user?.photoURL)
-            console.log("AuthProvider.jsx", user, user?.photoURL)
+            setLoading(false);
         })
         return(() => {
             unSubscribe();
@@ -49,7 +55,7 @@ function AuthProvider({children}) {
     }, [])
 
     let authMethods = {
-        createUser, updateUser, userImage, logOut, login, googleLogin
+        createUser, updateUser, userImage, logOut, login, googleLogin, loading
     }
 
     return(

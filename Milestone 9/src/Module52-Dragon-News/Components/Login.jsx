@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import HeaderUp from "./HeaderUp";
 import { IoIosArrowBack } from "react-icons/io";
 import { useContext } from "react";
@@ -7,11 +7,17 @@ import { AuthContext } from "../Context/AuthContext";
 function Login() {
     const {login} = useContext(AuthContext);
     let navigate = useNavigate()
+    let location = useLocation();
+
     function submitHandler(event) {
         event.preventDefault()
         const [email, password] = [event.target.email.value, event.target.password.value]
-        login(email, password);
-        navigate("/");
+        login(email, password)
+            .then(() => {
+                location.state ? navigate(location.state) : navigate("/");
+            })
+        
+    
     }
 
     return(

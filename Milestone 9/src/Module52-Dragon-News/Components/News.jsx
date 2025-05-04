@@ -2,9 +2,10 @@ import { AiTwotoneStar } from "react-icons/ai";
 import { CiBookmark } from "react-icons/ci";
 import { CiShare2 } from "react-icons/ci";
 import { IoEyeOutline } from "react-icons/io5";
+import { Link } from "react-router";
 
 function News({newsData}) {
-    const { author, title, image_url, details, rating, total_view } = newsData;
+    const {id,  author, title, image_url, details, rating, total_view } = newsData;
     const ratingStar = [] 
     for(let i = 0; i < rating.number; i++) {
         ratingStar.push(<AiTwotoneStar size={24} />)
@@ -36,7 +37,7 @@ function News({newsData}) {
                 </div>
 
                 <div>
-                    <p className="text-start">{details.slice(0, 200)} <span className="text-orange-500 font-semibold">Read More</span></p>
+                    <p className="text-start">{details.slice(0, 200)} <Link to= {`/view-more/${id}`} className="text-orange-500 font-semibold">Read More</Link></p>
                 </div>
 
                 <div class="divider"></div>

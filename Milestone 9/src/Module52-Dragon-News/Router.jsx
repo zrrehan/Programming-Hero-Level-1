@@ -5,6 +5,7 @@ import { Suspense } from "react";
 import Register from "./Components/Register";
 import Login from "./Components/Login";
 import ViewMore from "./Routes/ViewMore";
+import PrivateRoute from "./Routes/PrivateRoute";
 
 const dataPromise = fetch("/news.json")
     .then((res) => res.json());
@@ -18,7 +19,7 @@ export const router = createBrowserRouter([
             { index: true, element: <Navigate to= "/category/0"></Navigate>},
             {
                 path: "/category/:id", 
-                element: <Suspense fallback={<div><span className="loading loading-spinner loading-xl"></span></div>}>
+                element: <Suspense fallback={<div className=""><span className="loading loading-spinner loading-xl"></span></div>}>
                     <Category></Category>
                 </Suspense>
             }
@@ -34,8 +35,10 @@ export const router = createBrowserRouter([
     },
     {
         path: "view-more/:id", 
-        element: <Suspense fallback={<div><span className="loading loading-spinner loading-xl"></span></div>}>
-            <ViewMore dataPromise = {dataPromise}></ViewMore>
+        element: <Suspense>
+            <PrivateRoute>
+                <ViewMore dataPromise={dataPromise}></ViewMore>
+            </PrivateRoute>
         </Suspense>
     }
 
