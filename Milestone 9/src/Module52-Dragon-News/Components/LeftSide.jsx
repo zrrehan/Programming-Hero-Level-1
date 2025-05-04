@@ -6,7 +6,6 @@ const dataPromise = fetch("/categories.json")
 
 function LeftSide() {
     const categories = use(dataPromise);
-    console.log(categories)
     return(
         <div className="space-y-3 sticky top-2">
             {

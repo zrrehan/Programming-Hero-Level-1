@@ -7,7 +7,6 @@ const dataPromise = fetch("/news.json")
 
 function Category() {
     const newsData = use(dataPromise);
-    console.log(newsData);
     window.scrollTo(0, 0);
 
     const {id} = useParams();

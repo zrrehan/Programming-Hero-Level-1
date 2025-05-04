@@ -5,9 +5,11 @@ import { useContext } from "react";
 import { AuthContext } from "../Context/AuthContext";
 
 function Navbar() {
-    let { userImage } = useContext(AuthContext);
+    let { userImage, logOut } = useContext(AuthContext);
     console.log(userImage)
-
+    function logOutHandler() {
+        logOut();
+    }
     return(
         <div>
             <div className="flex bg-[#F3F3F3] p-4">
@@ -26,13 +28,13 @@ function Navbar() {
                             : <img src={userDemoPic} alt="User's Profile Picture" />
                     }
                 </div>
-                <Link to = "/auth/login">
-                    {
-                        userImage ?
-                            <button className="btn bg-blackBtn text-white px-6"> Logout </button>
-                            : <button className="btn bg-blackBtn text-white px-6"> Login </button>
-                    }
-                </Link>
+                
+                {
+                    userImage ?
+                        <button onClick = {logOutHandler} className="btn bg-blackBtn text-white px-6"> Logout </button>
+                        : <Link to="/auth/login"> <button className="btn bg-blackBtn text-white px-6"> Login </button></Link>
+                }
+                
             </div>
         </div>
         

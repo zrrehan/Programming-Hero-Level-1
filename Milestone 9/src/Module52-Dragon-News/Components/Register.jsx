@@ -15,7 +15,7 @@ function Register() {
             .then((result) => {
                 console.log(result);
                 updateUser(name, url)
-                // navigate("/");
+                navigate("/");
             })
     }
 
@@ -35,7 +35,7 @@ function Register() {
                         <input type="email" className="input" placeholder="Email" name = "email"/>
                         <label className="label">Password</label>
                         <input type="password" className="input" placeholder="Password" name = "password"/>
-                        <button className="btn bg-blackBtn text-white mt-4">Login</button>
+                        <button className="btn bg-blackBtn text-white mt-4">Register</button>
                         <p>Already have an account? <Link to="/auth/login" className="text-blue-500 underline">Login Now</Link></p>
                     </form>
                     <Link to = "/">
