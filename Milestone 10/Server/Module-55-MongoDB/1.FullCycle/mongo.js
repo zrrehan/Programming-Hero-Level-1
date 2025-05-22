@@ -3,13 +3,14 @@ const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const app = express();
 const port = 3000;
 const cors = require("cors");
+const { password, username } = require("./credentials.js");
 
 // Middleware
 app.use(cors());
 app.use(express.json());
 
 // mongo URI <<NEW>>
-const uri = "mongodb+srv://firstDB:f0B2LPjqvXhnSdc9@cluster0.vuskb8c.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const uri = `mongodb+srv://${username}:${password}@cluster0.vuskb8c.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
 
 
 // creating a MONGO CLIENT <<NEW>>
