@@ -1,6 +1,13 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router";
+import { AuthContext } from "../Context/AuthContext";
 
 function Navbar() {
+    const { user, logoutFirebase } = useContext(AuthContext);
+
+    function logOut() {
+        logoutFirebase();
+    }
     return(
         <div className="navbar bg-base-100 shadow-sm">
             <div className="navbar-start">
@@ -31,7 +38,17 @@ function Navbar() {
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link to = "/auth" className="btn">Login</Link>
+            {
+                    !user ? <div className="">
+                        <Link to="/auth" className="btn">Login</Link>
+                    </div>
+                        : <div className="dropdown dropdown-start">
+                            <div tabIndex={0} role="button" className="btn m-1">{user}</div>
+                            <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+                                <li onClick = {logOut}><a>Logout</a></li>
+                            </ul>
+                        </div>
+                }
             </div>
         </div>
     )

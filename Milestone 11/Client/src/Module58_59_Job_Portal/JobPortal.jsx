@@ -1,6 +1,7 @@
 import { createBrowserRouter, Router, RouterProvider } from 'react-router';
 import Layout from './Layout';
 import Auth from './Routes/Auth';
+import AuthProvider from './Context/AuthProvider';
 
 const router = createBrowserRouter([
     {
@@ -20,7 +21,9 @@ const router = createBrowserRouter([
 function JobPortal() {
     return(
         <div>
-            <RouterProvider router = {router}></RouterProvider>
+            <AuthProvider>
+                <RouterProvider router={router}></RouterProvider>
+            </AuthProvider>
         </div>
     )
 }
