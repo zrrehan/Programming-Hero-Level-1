@@ -3,6 +3,7 @@ import Layout from './Layout';
 import Auth from './Routes/Auth';
 import AuthProvider from './Context/AuthProvider';
 import Home from './Routes/Home';
+import Details from './Routes/Details';
 
 const router = createBrowserRouter([
     {
@@ -10,7 +11,8 @@ const router = createBrowserRouter([
         element: <Layout></Layout>,
         children: [
             {index: true, element: <Home></Home>}, 
-            {path: "/find-job", element:<h1>Find Job</h1>}
+            {path: "/find-job", element:<h1>Find Job</h1>}, 
+            {path: "/details/:id", element: <Details></Details>}
         ]
     }, 
     {
