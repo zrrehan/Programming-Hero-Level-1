@@ -10,11 +10,13 @@ function JWT() {
             setUser(null)
         } else {
             setUser("rehan@gmail.com")
-        }
-
-        if(user) {
-            const userData = { email: user }
-            axios.post("http://localhost:3000/jwt", userData)
+           
+            const userData = { email: "user" }
+            axios.post(
+                "http://localhost:3000/jwt",
+                userData, 
+                {withCredentials: true} 
+            )
                 .then(res => {
                     console.log(res.data);
                 }).catch(error => {
