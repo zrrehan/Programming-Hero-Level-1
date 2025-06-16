@@ -17,7 +17,7 @@ function Navbar() {
                 </ul>
             </div>
             {
-                user ? <a className="btn ml-96">{user}</a> : <div className="navbar-end">
+                user ? <a className="btn ml-96">{user.email}</a> : <div className="navbar-end">
                     <Link to="/auth"><a className="btn">Login</a></Link>
                 </div>
             }

@@ -18,7 +18,7 @@ function AuthProvider({children}) {
         const unSubscribe = onAuthStateChanged(auth, (user) => {
                 console.log(user);
                 if(user) {
-                    setUser(user.email)
+                    setUser(user)
                 }
             });
 
