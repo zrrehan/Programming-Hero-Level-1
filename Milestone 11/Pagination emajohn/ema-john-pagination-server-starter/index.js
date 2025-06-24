@@ -38,6 +38,14 @@ async function run() {
       res.send({count: result});
     })
 
+    app.get("/products-pagination", async(req, res) => {
+      let {cardNumber, label} = req.query;
+      [cardNumber, label] = [parseInt(cardNumber), parseInt(label)];
+      console.log(cardNumber, label);
+      const result = await productCollection.find().skip(label * cardNumber).limit(cardNumber).toArray();
+      res.send(result);
+    })
+
     app.get('/products', async(req, res) => {
         const result = await productCollection.find().toArray();
         res.send(result);

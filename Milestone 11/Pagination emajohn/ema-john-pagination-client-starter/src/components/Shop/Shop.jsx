@@ -9,15 +9,18 @@ const Shop = () => {
     const [products, setProducts] = useState([]);
     const [cart, setCart] = useState([])
     const {count} = useLoaderData();
-    console.log(count)
+    const [paginationValue, setPaginationValue] = useState(10);
+    const [pegination, setPegination] = useState(0);
+    const paginationAmount = Math.ceil(count / paginationValue);
 
     
-
+    const peginationLabelArray = [...Array(paginationAmount).keys()]
+    console.log(peginationLabelArray);
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch(`http://localhost:5000/products-pagination?cardNumber=${paginationValue}&label=${pegination}`)
             .then(res => res.json())
             .then(data => setProducts(data))
-    }, []);
+    }, [paginationValue, pegination]);
 
     useEffect(() => {
         const storedCart = getShoppingCart();
@@ -65,6 +68,12 @@ const Shop = () => {
         deleteShoppingCart();
     }
 
+    function selectFunc(event) {
+        const val = parseInt(event.target.value);
+        setPaginationValue(val);
+        setPegination(0);
+    }
+
     return (
         <div className='shop-container'>
             <div className="products-container">
@@ -85,6 +94,18 @@ const Shop = () => {
                         <button className='btn-proceed'>Review Order</button>
                     </Link>
                 </Cart>
+            </div>
+
+            <div className="pagination">
+                {
+                    peginationLabelArray.map((label) => <button className={pegination === label && "selected"} onClick={() => setPegination(label)}>{label}</button>)
+                } 
+                <select defaultValuealue={paginationValue} onChange={selectFunc}>
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="40">40</option>    
+                </select>  
             </div>
         </div>
     );
