@@ -3,7 +3,7 @@ import logo from "../../Assets/Profast-Logo.png";
 function Navbar() {
     const links = <>
         <NavLink to="/">Services</NavLink>
-        <NavLink to="/">Coverage</NavLink>
+        <NavLink to="/coverage">Coverage</NavLink>
         <NavLink to="/">About Us</NavLink>
         <NavLink to="/">Pricing</NavLink>
         <NavLink to="/">Be a Rider</NavLink>

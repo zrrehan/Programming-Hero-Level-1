@@ -4,6 +4,7 @@ import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router';
 import Layout from './Layout';
 import Home from './Routes/Home';
+import Coverage from './Routes/Coverage';
 
 const router = createBrowserRouter([
     {
@@ -12,7 +13,11 @@ const router = createBrowserRouter([
             <Layout></Layout>
         </div>,
         children: [
-            {index: true, Component: Home}
+            {index: true, Component: Home}, 
+            {
+                path: "/coverage", 
+                element: <Coverage></Coverage>
+            }
         ]
     },
 ]);
