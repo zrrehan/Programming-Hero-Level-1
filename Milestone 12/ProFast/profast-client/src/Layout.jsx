@@ -6,7 +6,9 @@ function Layout() {
     return(
         <div className="max-w-[1500px] w-[90%] mx-auto">
             <Navbar></Navbar>
-            <Outlet></Outlet>
+            <div className="my-16">
+                <Outlet></Outlet>
+            </div>
             <h1>Footer</h1>
         </div>
     )
