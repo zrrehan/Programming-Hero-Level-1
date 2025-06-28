@@ -1,4 +1,4 @@
-[
+const warehouse = [
   {
     "region": "Dhaka",
     "district": "Dhaka",
@@ -691,3 +691,6 @@
     "latitude": 23.9013
   }
 ]
+
+
+export {warehouse};
