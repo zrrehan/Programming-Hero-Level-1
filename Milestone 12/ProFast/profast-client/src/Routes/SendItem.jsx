@@ -64,7 +64,7 @@ function SendItem() {
                             <div className="">
                                 <legend className="font-semibold">Sender Region </legend>
                                 {/* <input name="parcelWeight" type="number" className="input  w-full rounded-3xl" placeholder="Sender Region" /> */}
-                                <select onChange={() => regionChange("sender")} defaultValue="Select a Region" className="select w-full rounded-3xl">
+                                <select name = "senderRegionName" onChange={() => regionChange("sender")} defaultValue="Select a Region" className="select w-full rounded-3xl">
                                     <option disabled={true}>Select a Region</option>
                                     <option>Dhaka</option>
                                     <option>Chattogram</option>
@@ -78,16 +78,16 @@ function SendItem() {
 
                             <div className="">
                                 <legend className="font-semibold">Address</legend>
-                                <input name="parcelWeight" type="number" className="input  w-full rounded-3xl" placeholder="Address" />
+                                <input name="senderAddress" type="text" className="input  w-full rounded-3xl" placeholder="Address" />
                             </div>
                             <div className="">
                                 <legend className="font-semibold">Sender Contact No</legend>
-                                <input name="parcelWeight" type="number" className="input  w-full rounded-3xl" placeholder="Sender Contact No" />
+                                <input name="senderContactNo" type="number" className="input  w-full rounded-3xl" placeholder="Sender Contact No" />
                             </div>
 
                             <div className="col-span-2"> 
                                 <legend className="font-semibold ">Sender Pickup ware House </legend>
-                                <select defaultValue="Select Pickup ware House" className="select w-full rounded-3xl">
+                                <select name = "senderWarehouse" defaultValue="Select Pickup ware House" className="select w-full rounded-3xl">
                                     <option disabled={true}>Select Pickup ware House</option>
                                     {
                                         senderWarehouse
@@ -97,7 +97,7 @@ function SendItem() {
 
                             <div className="col-span-2"> {/*text area div  */}
                                 <legend className="font-semibold ">Pickup Instruction</legend>
-                                <textarea className="textarea w-full h-[150px]" placeholder="Pickup Instruction"></textarea>
+                                <textarea name = "pickupInstruction" className="textarea w-full h-[150px]" placeholder="Pickup Instruction"></textarea>
                             </div>
                         </div>
                     </div>
@@ -107,12 +107,12 @@ function SendItem() {
                         <div className=" md:grid grid-cols-2 gap-4">
                             <div className="">
                                 <legend className="font-semibold">Reciever Name</legend>
-                                <input name="parcelWeight" type="text" className="input  w-full rounded-3xl" placeholder="Reciever name" />
+                                <input name="recieverName" type="text" className="input  w-full rounded-3xl" placeholder="Reciever name" />
                             </div>
 
                             <div className="">
                                 <legend className="font-semibold">Reciever Region</legend>
-                                <select onChange={() => regionChange("reciever")} defaultValue="Select a Region" className="select w-full rounded-3xl">
+                                <select name = "recieverRegion" onChange={() => regionChange("reciever")} defaultValue="Select a Region" className="select w-full rounded-3xl">
                                     <option disabled={true}>Select a Region</option>
                                     <option>Dhaka</option>
                                     <option>Chattogram</option>
@@ -126,17 +126,17 @@ function SendItem() {
 
                             <div className="">
                                 <legend className="font-semibold">Address</legend>
-                                <input name="parcelWeight" type="number" className="input  w-full rounded-3xl" placeholder="Address" />
+                                <input name="recieverAddress" type="text" className="input  w-full rounded-3xl" placeholder="Address" />
                             </div>
                             <div className="">
                                 <legend className="font-semibold">Reciever Contact No</legend>
-                                <input name="parcelWeight" type="number" className="input  w-full rounded-3xl" placeholder="Reciever Contact No" />
+                                <input name="recieverContactNo" type="number" className="input  w-full rounded-3xl" placeholder="Reciever Contact No" />
                             </div>
 
                             <div className="col-span-2">
                                 <legend className="font-semibold ">Reciever Pickup Ware House</legend>
                                 <select defaultValue="Select Pickup ware House" className="select w-full rounded-3xl">
-                                    <option disabled={true}>Select Pickup ware House</option>
+                                    <option name = "recieverWarehouse" disabled={true}>Select Pickup ware House</option>
                                     {
                                         recieverWarehouse
                                     }
@@ -145,7 +145,7 @@ function SendItem() {
 
                             <div className="col-span-2"> {/*text area div  */}
                                 <legend className="font-semibold ">Delivery Instruction</legend>
-                                <textarea className="textarea w-full h-[150px]" placeholder="Delivery Instruction"></textarea>
+                                <textarea name = "deliveryInstruction" className="textarea w-full h-[150px]" placeholder="Delivery Instruction"></textarea>
                             </div>
                         </div>
                     </div>
