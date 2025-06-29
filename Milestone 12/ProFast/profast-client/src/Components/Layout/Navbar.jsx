@@ -4,9 +4,9 @@ function Navbar() {
     const links = <>
         <NavLink to="/">Services</NavLink>
         <NavLink to="/coverage">Coverage</NavLink>
-        <NavLink to="/">About Us</NavLink>
-        <NavLink to="/">Pricing</NavLink>
-        <NavLink to="/">Be a Rider</NavLink>
+        <NavLink to="/about-us">About Us</NavLink>
+        <NavLink to="/send-item">Send Item</NavLink>
+        <NavLink to="/be-a-rider">Be a Rider</NavLink>
     </>
     return(
         <div className="navbar bg-base-100 shadow-sm rounded-2xl mt-8 px-7">

@@ -1,10 +1,25 @@
 @import "tailwindcss";
+
 @plugin "daisyui" {
-  themes: light --default;
+    themes: light --default;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 
 .main-font {
-  font-family: "Urbanist", sans-serif;
+    font-family: "Urbanist", sans-serif;
+}
+
+a.active {
+    background-color: #CAEB66;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 30px;
+}
+
+a {
+    padding: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
 }
