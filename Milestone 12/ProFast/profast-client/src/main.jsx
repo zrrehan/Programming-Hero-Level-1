@@ -6,6 +6,7 @@ import Layout from './Layout';
 import Home from './Routes/Home';
 import Coverage from './Routes/Coverage';
 import SendItem from './Routes/SendItem';
+import Authentication from './Routes/Authentication';
 
 const router = createBrowserRouter([
     {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
             }
         ]
     },
+    {
+        path: "/authentication",
+        element: <Authentication></Authentication>
+    }
 ]);
 
 createRoot(document.getElementById('root')).render(

@@ -126,7 +126,7 @@ function SendItem() {
 
                             <div className="">
                                 <legend className="font-semibold">Address</legend>
-                                <input name="recieverAddress" type="text" className="input  w-full rounded-3xl" placeholder="Address" />
+                                <input name="recieverAddress" type="textnpm ru" className="input  w-full rounded-3xl" placeholder="Address" />
                             </div>
                             <div className="">
                                 <legend className="font-semibold">Reciever Contact No</legend>
