@@ -1,10 +1,12 @@
 import TanstackQuery from "./1.TanStackQuery/TanstackQuery"
+import LottieComp from "./2.LottieAnimation/LottieComp"
 
 function App() {
 
   return (
     <>
-      <TanstackQuery></TanstackQuery>
+      {/* <TanstackQuery></TanstackQuery> */}
+      <LottieComp></LottieComp>
     </>
   )
 }
