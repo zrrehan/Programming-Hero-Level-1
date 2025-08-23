@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# NextJS Part 2 / 4
 
-## Getting Started
+This demonstrates different rendering techniques in Next.js, comparing **Server-Side Rendering (SSR)** and **Client-Side Rendering (CSR)** using practical examples.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Server-Side Rendering (SSR)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Server-Side Rendering (SSR) is a technique where the HTML for a page is generated on the server for each request. This means the page is fully rendered before it reaches the client, which can improve SEO and initial load performance.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+In this project, the SSR example is implemented in the **`posts` directory/route**. Here, data is fetched on the server and the HTML is rendered with the posts already populated, so the user receives a fully rendered page immediately.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Client-Side Rendering (CSR)
 
-To learn more about Next.js, take a look at the following resources:
+Client-Side Rendering (CSR) is a technique where the HTML is rendered on the client (browser) after the JavaScript is loaded. The page initially loads faster, but data fetching and rendering happen in the browser.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+In this project:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **`meals-react-way`**: We fetch a meal API and display the results entirely on the client side, just like in a traditional React app. The search and display logic is fully handled in the client.
+  
+- **`meals-nextjs-way`**: We split responsibilities between server and client. The **interactive search** is handled in the client via `MealSearch.jsx`, while the **data showcase** is rendered on the server. This demonstrates a hybrid approach where SSR and CSR coexist.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project highlights how Next.js allows flexibility in rendering strategies, enabling developers to choose SSR, CSR, or a combination depending on performance and user experience requirements.
