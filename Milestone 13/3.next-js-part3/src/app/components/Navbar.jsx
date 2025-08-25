@@ -10,6 +10,8 @@ function Navbar() {
                 <ul className="menu menu-horizontal px-1">
                     <li><Link href = "/">Home</Link></li>
                     <li><Link href = "/posts">Posts</Link></li>
+                    <li><Link href="/users/add">Add Users</Link></li>
+                    <li><Link href="/users">Users</Link></li>
                 </ul>
             </div>
             <div className="navbar-end">
